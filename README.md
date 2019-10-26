@@ -27,3 +27,4 @@ Things you may want to cover:
 TEST1 hirota
 TEST2 nakajima
 TEST3 suzuki
+TEST4 nori
