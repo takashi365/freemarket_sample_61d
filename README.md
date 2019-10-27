@@ -34,7 +34,6 @@ Things you may want to cover:
 |phone         |string|null:false,unique:true          |
 |first_name    |string|null:false                      |
 |last_name     |string|null:false                      |
-|address       |string|null:false                      |
 |birthday      |string|null:false                      |
 |payment_method|string|null:false                      |
 
@@ -45,6 +44,22 @@ Things you may want to cover:
 - has_many :rates
 - has_many :buyer
 - has_many :seller
+
+
+## Addressテーブル
+|Column       |Type   |Options   |
+|-------------|-------|----------|
+|Postal_code  |string |null:false|
+|Prefectures  |integer|null:false|
+|City         |string |null:false|
+|House_number |string |null:false|
+|Building_name|string |null:false|
+
+## Association
+- belongs_to :user
+
+## Enum
+- prefectures
 
 ## ratesテーブル
 
