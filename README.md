@@ -153,49 +153,24 @@ Things you may want to cover:
 ## Enum
 - rate
 
-## L_categoriesテーブル
+## categoriesテーブル
 
 |Column       |Type  |Options   |
 |-------------|------|----------|
 |category_name|string|null:false|
+|ancestry     |string|null:false|
 
 ## Association
 - has_many :items
-- has_many :M_categories
-
-## M_categoriesテーブル
-
-|Column       |Type   |Options                    |
-|-------------|-------|---------------------------|
-|category_name|string |null:false                 |
-|L_category_id|integer|null:false,foreign_key:true|
-
-## Association
-- belongs_to :L_category
-- has_many :items
-- has_many :S_categories
-
-## S_categoriesテーブル
-
-|Column       |Type   |Options                    |
-|-------------|-------|---------------------------|
-|category_name|string |null:false                 |
-|M_category_id|integer|null:false,foreign_key:true|
-
-## Association
-- belongs_to :M_category
-- has_many :items
-- has_many :sizes
+- has_ancestry
 
 ## sizesテーブル
 
 |Column       |Type   |Options                    |
 |-------------|-------|---------------------------|
 |size_name    |string |null:false                 |
-|S_category_id|integer|null:false,foreign_key:true|
 
 ## Association
-- belongs_to :S_category
 - has_many :items
 
 ## brandsテーブル
