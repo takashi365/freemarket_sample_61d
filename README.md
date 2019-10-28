@@ -88,18 +88,14 @@ Things you may want to cover:
 |shipping_method|integer|null:false                 |
 |arrival_date   |integer|null:false                 |
 |like_count     |integer|null:false                 |
-|L_category_id  |integer|null:false,foreign_key:ture|
-|M_category_id  |integer|null:false,foreign_key:ture|
-|S_category_id  |integer|null:false,foreign_key:true|
+|category_id  |integer|null:false,foreign_key:ture|
 |size_id        |integer|null:false,foreign_key:true|
 |brand_id       |integer|null:false,foreign_key:true|
 
 ## Association
 - belongs_to :size
 - belongs_to :brand
-- belongs_to :L_category
-- belongs_to :M_category
-- belongs_to :S_category
+- belongs_to :category
 - has_many :images
 - has_many :comments
 - has_many :likes
