@@ -1,0 +1,51 @@
+.toppage{
+  max-width: 1020px;
+  width: 100%;
+  margin: 0px auto;
+  height: 100vh;
+}
+
+.toppage_image{
+  height: 390px;
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  top: 0px;
+  width: 100vw;
+  overflow: hidden;
+  object-fit: contain;
+  background-image: url(https://web-jp-assets.mercdn.net/_next/static/images/top-banner-main-892151c….jpg);
+  background-position: center center;
+}
+.category_list{
+  padding: 56px 0px 30px;
+  background-color: rgb(255, 255, 255);
+    left: 50%;
+    margin-left: -50vw;
+    position: relative;
+    top: 0px;
+    width: 100vw;
+    &__title{
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+    }
+    &__btn{
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    }
+}
