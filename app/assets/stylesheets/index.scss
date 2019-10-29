@@ -3,6 +3,7 @@
   width: 100%;
   margin: 0px auto;
   height: 100vh;
+  background: $grey;
 }
 
 .toppage_image{
@@ -16,10 +17,13 @@
   object-fit: contain;
   background-image: url(https://web-jp-assets.mercdn.net/_next/static/images/top-banner-main-892151c….jpg);
   background-position: center center;
+  background-size: auto;
+  
 }
 .category_list{
+  overflow: scroll;
   padding: 56px 0px 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: $white;
     left: 50%;
     margin-left: -50vw;
     position: relative;
@@ -32,20 +36,115 @@
     font-size: 28px;
     font-weight: 600;
     line-height: 1.4em;
-    margin: 0;
-    padding: 0;
-    font-weight: 600;
-    line-height: 1.4em;
-    margin: 0;
     padding: 0;
     }
     &__btn{
     overflow-x: auto;
     text-align: center;
     white-space: nowrap;
-    vertical-align: baseline;
     margin: 0px;
     padding: 0px;
     border-width: 0px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: -10px 0px 0px -10px;
+
+    &__title{
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 8px 16px;
+    margin: 10px 0px 0px 10px;
     }
+    }
+  }
+.item_list{
+  padding: 42px 0px 100px;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+
+  }
+.item_list_box{
+  margin-bottom: 16px;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+&__title{
+
+  font-size: 24px;
+  font-family: Arial,æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“,YuGothic,ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,sans-serif;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0
 }
+&__meny{
+  font-size: 14px;
+  padding: 5px 16px 5px 5px;
+  font-weight: 600;
+  color: $blue;
+  float: right;
+  
+}
+}
+.item_list_box__content{
+}
+.item_list_box_item{
+  padding: 10px;
+  width: calc(20% - 20px);
+  flex-wrap: wrap;
+  font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  float: left;
+&__image{
+  border: 1px solid $black;
+  height: 0;
+    overflow: hidden;
+    padding: 0 0 100%;
+    background: lemonchiffon;
+    position: relative;
+}
+&__text{
+  border: 1px solid $black;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 14px;
+  height: 64px;
+  line-height: 1.4em;
+  padding: 0 12px;
+  white-space: normal;
+  word-break: break-word;
+}
+}
+.image_price{
+  -webkit-box-align: center;
+    align-items: center;
+    background: rgba(0,0,0,.4);
+    border-radius: 0 14px 14px 0;
+    bottom: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 17px;
+    height: 28px;
+    letter-spacing: .02em;
+    margin: 0;
+    padding: 0 12px;
+    position: absolute;
+    z-index: 2;
+  &__enn{
+  }
+  &__num{}
+}
+
+
+
+
+
+

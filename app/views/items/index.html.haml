@@ -1,7 +1,13 @@
 = render 'header'
 .toppage
   .toppage_image
-  .category_list
-    .category_list__title
-      人気カテゴリー
-    .category_list__btn
+    .toppage_image__left
+      =fa_icon 'chevron-left', class: 'toppage_image_left'
+    .toppage_image__left
+      =fa_icon 'chevron-right', class: 'toppage_image_right'
+    .toppage_image_right
+  = render 'items'
+  = render 'items'
+  = render 'items'
+  = render 'items'
+        

@@ -7,30 +7,33 @@
         何かお探しですか？
         .headers__up__search__btn
           .headers__up__search__btn__icon
-            あ
+            = fa_icon 'search'
     .headers__bottom
       .headers__bottom__left.flex
         .headers__bottom__left__category
           .headers__bottom__left__category__icon
-            aa
+            = fa_icon 'list' ,class: 'header_left_icon'
           .headers__bottom__left__category__text
             カテゴリーから探す
         .headers__bottom__left__brand
           .headers__bottom__left__brand__icon
-            aa
+            = fa_icon 'tags', class: 'header_left_icon'
           .headers__bottom__left__brand__text
             ブランドから探す
       .headers__bottom__right.flex
-        .headers__bottom__right__like
+        .headers__bottom__right__like.flex
           .headers__bottom__right__like__icon
+            = fa_icon 'heart' ,class: 'header_right_icon'
           .headers__bottom__right__like__text
             =link_to'いいね！一覧'
-        .headers__bottom__right__info
+        .headers__bottom__right__info.flex
           .headers__bottom__right__info__icon
+            = fa_icon 'bell' ,class: 'header_right_icon'
           .headers__bottom__right__info__text
             =link_to'お知らせ'
         .headers__bottom__right__list.flex
           .headers__bottom__right__list__icon
+            = fa_icon 'check', class: 'header_right_icon'
           .headers__bottom__right__list__text
             =link_to 'やることリスト'
         .headers__bottom__right__mypage.flex

@@ -8,7 +8,6 @@
   width: 1020px;
   margin: 0 auto;
   padding: 8px 0px 0px;
-  
 }
 .headers__up{
   box-sizing: border-box;
@@ -64,7 +63,7 @@
   border-image: initial;
   font: inherit;
   height: 44px;
-  
+  padding-bottom: 6px;
 }
 .headers__bottom__left{
   width: fit-content;
@@ -86,6 +85,7 @@
     height: 12px;
     margin: 0px 2px 0px -2px;
     float: left;
+    margin-top: 5px;
   }
   &__text{
     display: block;
@@ -112,6 +112,7 @@
     margin-right: 4px; 
     margin: 0px 2px 0px -2px;
     float: left;
+    margin-top: 5px;
   }
   &__text{
     display: block;
@@ -134,8 +135,7 @@
 .headers__bottom__right__like{
   padding-right: 14px;
   &__icon{
-    
-
+  margin: auto 10px;
   }
   &__text{
     -webkit-box-align: center;
@@ -151,7 +151,7 @@
 .headers__bottom__right__info{
   padding: 0 14px;
   &__icon{
-    
+    margin: auto 10px;
   }
   &__text{
     -webkit-box-align: center;
@@ -167,7 +167,7 @@
 .headers__bottom__right__list{
   padding: 0 14px;
   &__icon{
-    
+    margin: auto 10px;
 
   }
   &__text{
