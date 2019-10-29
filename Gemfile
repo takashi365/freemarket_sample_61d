@@ -65,4 +65,6 @@ gem 'ancestry'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'kaminari'
-
+gem 'font-awesome-rails'
+gem 'devise'
+gem "jquery-rails"
