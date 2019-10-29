@@ -1,2 +1,19 @@
 @import "./reset";
 @import "config/colors";
+.wrapper{
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+}
+.flex{
+  display: flex;
+}
+
+@import "header";
+@import "config/images";
+
+a{
+  color:$black;
+  text-decoration: none;
+  }
+  @import "index";
