@@ -1,5 +1,5 @@
 class SignupController < ApplicationController
-  def start
+  def entry_start
     @user = User.new # 新規インスタンス作成
   end
 
