@@ -1,4 +1,6 @@
 = render 'header'
+= render 'exhibit' 
+
 .toppage
   .toppage_image
     .toppage_image__left
@@ -9,7 +11,7 @@
   .category_list
     .category_list__title
       人気カテゴリー
-    .category_list__btn.flex
+    .category_list__btn
       .category_list__btn__title
         レディース
       .category_list__btn__title
@@ -18,11 +20,16 @@
         家電・スマホ・カメラ
       .category_list__btn__title
         おもちゃ・ホビー・グッズ
-  = render 'items'
+  .itemss
+    .items
+      = render 'items'
+      = render 'items'
+      = render 'items'
+      = render 'items'
   .category_list
     .category_list__title
       人気カテゴリー
-    .category_list__btn.flex
+    .category_list__btn
       .category_list__btn__title
         レディース
       .category_list__btn__title
@@ -31,5 +38,9 @@
         家電・スマホ・カメラ
       .category_list__btn__title
         おもちゃ・ホビー・グッズ
-  = render 'items'
- 
+  .itemss
+    .items
+      = render 'items'
+      = render 'items'
+      = render 'items'
+      = render 'items'
