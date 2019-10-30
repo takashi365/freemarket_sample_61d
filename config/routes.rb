@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "items#index"
   get 'items/index'
   resources :users
-  resources :singup do
+  resources :signup do
     collection do
       get 'step1'
       get 'step2'
