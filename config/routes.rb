@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   resources :users
   resources :signup do
     collection do
-      get 'step1'
-      get 'step2'
-      get 'step3'
-      get 'step4' 
-      get 'step5'
-      get 'step6'
-      get 'done' 
+      get 'entry_start'
+      get 'member_infomation'
+      get 'phone_number'
+      get 'sms_check' 
+      get 'address_input'
+      get 'howto_paiement'
+      get 'entry_done' 
     end
   end
 end
