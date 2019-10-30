@@ -1,0 +1,32 @@
+
+.bottoms{
+  height: 260px;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 0px;
+  padding: 0px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  font: inherit;
+  background: url("https://web-jp-assets.mercdn.net/_next/static/images/download_app_bg-b57d6f1a32f2aebd89cf6f43bc2e4b39.jpg") center center / cover;
+  background-position: center center;
+}
+.bottom{
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  vertical-align: baseline;
+  padding: 0px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  font: inherit;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 750px;
+  margin: 0px auto;
+}

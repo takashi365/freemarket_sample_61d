@@ -1,7 +1,7 @@
 .toppage{
   max-width: 1020px;
   width: 100%;
-  margin: 0px auto;
+  margin: 4px auto;
   height: 100%;
   background: $grey;
 }
@@ -107,7 +107,6 @@ padding: 42px 0px 100px;
 }
 }
 .item_list_box__content{
-  float: left;
   width: 100%;
 }
 
@@ -116,7 +115,6 @@ padding: 42px 0px 100px;
   width: calc(20% - 20px);
   flex-wrap: wrap;
   font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-  float: left;
 &__image{
   box-shadow: 0 2px 4px rgba(0,0,0,.18);
   border: 1px solid $black;
@@ -158,11 +156,8 @@ padding: 42px 0px 100px;
     padding: 0 12px;
     position: absolute;
     z-index: 2;
-  &__enn{
-  }
-  &__num{}
+ 
 }
-
 
 
 

@@ -13,6 +13,22 @@
 }
 body {
   background-color: $grey;
+  box-sizing: border-box;
+vertical-align: baseline;
+margin: 0px;
+padding: 0px;
+border-width: 0px;
+border-style: initial;
+border-color: initial;
+border-image: initial;
+font: inherit;
+line-height: 1;
+position: relative;
+min-height: 100%;
+color: rgb(51, 51, 51);
+background-color: rgb(245, 245, 245);
+font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+font-size: 14px;
 
 }
 
@@ -25,3 +41,4 @@ a{
   }
 @import "index";
 @import "config/exhibit";
+@import "footer";

@@ -1,6 +1,5 @@
 = render 'header'
 = render 'exhibit' 
-= render 'footer'
 
 .toppage
   .toppage_image
@@ -9,39 +8,65 @@
     .toppage_image__left
       =fa_icon 'chevron-right', class: 'toppage_image_right'
     .toppage_image_right
-  .category_list
-    .category_list__title
-      人気カテゴリー
-    .category_list__btn
-      .category_list__btn__title
-        レディース
-      .category_list__btn__title
-        メンズ
-      .category_list__btn__title
-        家電・スマホ・カメラ
-      .category_list__btn__title
-        おもちゃ・ホビー・グッズ
-  .itemss
-    .items
-      = render 'items'
-      = render 'items'
-      = render 'items'
-      = render 'items'
-  .category_list
-    .category_list__title
-      人気カテゴリー
-    .category_list__btn
-      .category_list__btn__title
-        レディース
-      .category_list__btn__title
-        メンズ
-      .category_list__btn__title
-        家電・スマホ・カメラ
-      .category_list__btn__title
-        おもちゃ・ホビー・グッズ
-  .itemss
-    .items
-      = render 'items'
-      = render 'items'
-      = render 'items'
-      = render 'items'
+  .category
+    .category_list
+      .category_list__title
+        人気カテゴリー
+      .category_list__btn
+        .category_list__btn__title
+          レディース
+        .category_list__btn__title
+          メンズ
+        .category_list__btn__title
+          家電・スマホ・カメラ
+        .category_list__btn__title
+          おもちゃ・ホビー・グッズ
+    .itemss
+      .items
+      .item_list_box
+        .item_list_box__title
+          レディース新着アイテム
+        .item_list_box__meny
+          もっと見る 
+          =fa_icon 'angle-right'
+        = render 'items'
+        = render 'items'  
+      .item_list_box
+        .item_list_box__title
+          レディース新着アイテム
+        .item_list_box__meny
+          もっと見る 
+          =fa_icon 'angle-right'
+        = render 'items'
+        = render 'items'
+    .category_list
+      .category_list__title
+        人気カテゴリー
+      .category_list__btn
+        .category_list__btn__title
+          レディース
+        .category_list__btn__title
+          メンズ
+        .category_list__btn__title
+          家電・スマホ・カメラ
+        .category_list__btn__title
+          おもちゃ・ホビー・グッズ
+    .itemss
+      .items
+      .item_list_box
+        .item_list_box__title
+          レディース新着アイテム
+        .item_list_box__meny
+          もっと見る 
+          =fa_icon 'angle-right'
+        = render 'items'
+        = render 'items' 
+      .item_list_box
+        .item_list_box__title
+          レディース新着アイテム
+        .item_list_box__meny
+          もっと見る  
+          =fa_icon 'angle-right'
+        = render 'items'
+        = render 'items'
+= render 'footer'
