@@ -15,11 +15,27 @@
   width: 100vw;
   overflow: hidden;
   object-fit: contain;
-  background-image: url(https://web-jp-assets.mercdn.net/_next/static/images/top-banner-main-892151c….jpg);
-  background-position: center center;
   background-size: auto;
-  
-  
+  &__left{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-left: 60px;
+    cursor: pointer;
+    height: 46px;
+    width: 31px;
+    line-height: 46px;
+  }
+  &__right{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 60px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 46px;
+    width: 31px;
+  }
 }
 .category_list{
   overflow: scroll;
@@ -63,6 +79,7 @@
     }
     }
   }
+
 .itemss{
 color: rgb(51, 51, 51);
 box-sizing: border-box;
@@ -76,19 +93,19 @@ font: inherit;
 padding: 42px 0px 100px;
 }
 .item_list{
-  align-items: flex-end;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+align-items: flex-end;
+-webkit-box-pack: justify;
+justify-content: space-between;
 
   }
 .item_list_box{
-  margin-bottom: 16px;
-  align-items: flex-end;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  position: relative;
-&__title{
+margin-bottom: 16px;
+align-items: flex-end;
+-webkit-box-pack: justify;
+justify-content: space-between;
+position: relative;
 
+&__title{
   font-size: 24px;
   font-family: Arial,æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“,YuGothic,ãƒ¡ã‚¤ãƒªã‚ª,Meiryo,sans-serif;
   font-weight: 600;

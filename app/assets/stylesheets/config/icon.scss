@@ -6,27 +6,9 @@ i.header_right_icon{
   margin-right: 10px;
   width: 19px; 
   font-size: 19px;
+
 }
-i.toppage_image_left{
-  position: absolute;
-    top: 50%;
-    left: 0;
-    margin-left: 60px;
-    cursor: pointer;
-    height: 46px;
-    width: 31px;
-    line-height: 46px;;
-}
-i.toppage_image_right{
-  position: absolute;
-    top: 50%;
-    right: 0;
-    margin-right: 60px;
-    background-color: transparent;
-    cursor: pointer;
-    height: 46px;
-    width: 31px;
-}
+
 i.camera{
   color: $white;
   font-size: 54px;
