@@ -2,5 +2,16 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "items#index"
   get 'items/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users
+  resources :singup do
+    collection do
+      get 'step1'
+      get 'step2'
+      get 'step3'
+      get 'step4' 
+      get 'step5'
+      get 'step6'
+      get 'done' 
+    end
+  end
 end
