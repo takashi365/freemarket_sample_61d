@@ -2,5 +2,16 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "items#index"
   get 'items/index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users
+  resources :signup do
+    collection do
+      get 'entry_start'
+      get 'member_infomation'
+      get 'phone_number'
+      get 'sms_check' 
+      get 'address_input'
+      get 'howto_paiement'
+      get 'entry_done' 
+    end
+  end
 end
