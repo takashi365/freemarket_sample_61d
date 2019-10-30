@@ -2,7 +2,7 @@
   max-width: 1020px;
   width: 100%;
   margin: 0px auto;
-  height: 100vh;
+  height: 100%;
   background: $grey;
 }
 
@@ -23,12 +23,12 @@
 .category_list{
   overflow: scroll;
   padding: 56px 0px 30px;
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  top: 0px;
+  width: 100vw;
   background-color: $white;
-    left: 50%;
-    margin-left: -50vw;
-    position: relative;
-    top: 0px;
-    width: 100vw;
     &__title{
     margin-bottom: 16px;
     text-align: center;
@@ -51,7 +51,6 @@
     margin: -10px 0px 0px -10px;
 
     &__title{
-    background-color: rgb(239, 239, 239);
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
@@ -59,6 +58,7 @@
     border-radius: 15px;
     padding: 8px 16px;
     margin: 10px 0px 0px 10px;
+    background-color: rgb(239, 239, 239);
     }
     }
   }
@@ -82,7 +82,8 @@
   font-weight: 600;
   line-height: 1.4em;
   margin: 0;
-  padding: 0
+  padding: 0;
+  float: left;
 }
 &__meny{
   font-size: 14px;
@@ -102,14 +103,17 @@
   font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   float: left;
 &__image{
+  box-shadow: 0 2px 4px rgba(0,0,0,.18);
   border: 1px solid $black;
   height: 0;
     overflow: hidden;
     padding: 0 0 100%;
     background: lemonchiffon;
     position: relative;
+   
 }
 &__text{
+  box-shadow: 0 2px 4px rgba(0,0,0,.18);
   border: 1px solid $black;
   box-sizing: border-box;
   color: #222;
@@ -119,6 +123,7 @@
   padding: 0 12px;
   white-space: normal;
   word-break: break-word;
+  background: $white;
 }
 }
 .image_price{
@@ -128,7 +133,7 @@
     border-radius: 0 14px 14px 0;
     bottom: 8px;
     box-sizing: border-box;
-    color: #fff;
+    color: $white;
     display: -ms-inline-flexbox;
     display: inline-flex;
     font-size: 17px;

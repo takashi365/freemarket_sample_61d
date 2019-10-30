@@ -6,7 +6,7 @@
 }
 .headers{
   width: 1020px;
-  margin: 0 auto;
+  margin: 4px auto;
   padding: 8px 0px 0px;
 }
 .headers__up{
@@ -30,12 +30,13 @@
   -webkit-appearance: none;
   border-width: 1px;
   transition: all 0.3s ease-out 0s;
+  position: relative;
   
     &__btn{
       height: 40px;
       position: absolute;
       right: 0px;
-      top: 0px;
+      top: 8px;
       width: 40px;
       &__icon{
       color: $black;
@@ -49,7 +50,9 @@
   }
 }
 
-
+.headers__up__searchs{
+  position: relative;
+}
 .headers__bottom{
   -webkit-box-pack: justify;
   justify-content: space-between;

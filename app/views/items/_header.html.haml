@@ -3,11 +3,11 @@
     .headers__up.flex
       .headers__up__image 
         = image_tag 'mercari.png' ,class:'mercari'
-      .headers__up__search
-        何かお探しですか？
-        .headers__up__search__btn
-          .headers__up__search__btn__icon
-            = fa_icon 'search'
+      .headers__up__searchs
+        %input.headers__up__search{placeholder: "何かお探しですか？", type: "text"}
+          .headers__up__search__btn
+            .headers__up__search__btn__icon
+              = fa_icon 'search'
     .headers__bottom
       .headers__bottom__left.flex
         .headers__bottom__left__category
