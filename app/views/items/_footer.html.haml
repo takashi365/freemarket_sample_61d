@@ -31,6 +31,10 @@
           公式ブログ
         .footer_box__merkari__content__text
           メルカリロゴ利用ガイドライン
+        .footer_box__merkari__content__icon
+          =fa_icon'twitter',class:'twitter_icon'
+        .footer_box__merkari__content__icon
+          =fa_icon 'facebook-square',class: 'facebook_icon'
     .footer_box__help
       .footer_box__help__title
         ヘルプ＆ガイド
@@ -54,24 +58,25 @@
     .footer_box__privacy
       .footer_box__privacy__title
         プライバシーと利用規約
-      .footer_box__privacy__content
-        .footer_box__privacy__content__text
-          プライバシーポリシー
-        .footer_box__privacy__content__text
-          メルカリ利用規約
-        .footer_box__privacy__content__text
-          あんしんスマホサポート制度に関する利用規約
-        .footer_box__privacy__content__text
-          コンプライアンスポリシー
-      .footer_box__privacy__content
-        .footer_box__privacy__content__text
-          個人データの安全管理に係わる基本方針
-        .footer_box__privacy__content__text
-          特定商取引に関する表記
-        .footer_box__privacy__content__text
-          資金決済法に基づく表示
-        .footer_box__privacy__content__text
-          法令順守と犯罪抑止のために
+      .footer_box__privacy__contents.flex
+        .footer_box__privacy__content_left
+          .footer_box__privacy__content_left__text_left
+            プライバシーポリシー
+          .footer_box__privacy__content_left__text_left
+            メルカリ利用規約
+          .footer_box__privacy__content_left__text_left
+            あんしんスマホサポート制度に関する利用規約
+          .footer_box__privacy__content_left__text_left
+            コンプライアンスポリシー
+        .footer_box__privacy__content_right
+          .footer_box__privacy__content_right__text_right
+            個人データの安全管理に係わる基本方針
+          .footer_box__privacy__content_right__text_right
+            特定商取引に関する表記
+          .footer_box__privacy__content_right__text_right
+            資金決済法に基づく表示
+          .footer_box__privacy__content_right__text_right
+            法令順守と犯罪抑止のために
     .footer_box__kuni
       .footer_box__kuni__title
         国
@@ -80,7 +85,7 @@
           日本
         .footer_box__kuni__content__text
           United States
-  .footer_icon
+  .footer_icon.flex
     =image_tag 'merkari_white.svg'
     .footer_icon__text
       © 2019 Mercari
