@@ -1,2 +1,18 @@
 .bottoms
-  .bottom
+  =image_tag 'bottom.png',class: 'bottom'
+  .bottom.flex
+    .bottom_left
+      .bottom_left__top
+        スマホでかんたんフリマアプリ
+      .bottom_left__center
+        今すぐ無料ダウンロード！
+      .bottom_left__bottom.flex
+        .bottom_left__bottom__merkari
+          = image_tag 'merkari_box.png',class: 'merkari_box'
+        .bottom_left__bottom__app
+          =image_tag 'app.png',class:'app'
+        .bottom_left__bottom__google
+          =image_tag 'google.png' , class: 'google'
+    .bottom_right
+      =image_tag 'iphone.png',class: 'iphone'
+.footer
