@@ -1,0 +1,20 @@
+= render 'items/header'
+= render 'items/exhibit'
+%nav.bread-crumbs
+  %ul
+    %li
+      %span メルカリ
+      %i.icon-arrow-right
+    %li
+      %span マイページ
+      %i.icon-arrow-right
+    %li
+      %span ログアウト
+%main.mypage-container.clearfix
+  .mypage-content
+    .mypage-chapter-container
+      %form.maypage-single-inner
+        .maypage-single-content
+          %button.btn-default.btn-red ログアウト
+  = render 'mypage-side'
+= render 'items/footer'
