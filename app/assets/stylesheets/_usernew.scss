@@ -1,0 +1,31 @@
+.headers__bottom__right{
+&__newuser{
+  background-color:$red;
+  color:$white;
+  display: block;
+  font-size: 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $red;
+  border-image: initial;
+  border-radius: 4px;
+  padding: 8px 10px;
+  line-height: 14px;
+  color:$white;
+}
+&__login{
+  background-color: $white;
+  color: $blue;
+  display: block;
+  font-size: 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $blue;
+  border-image: initial;
+  border-radius: 4px;
+  padding: 8px 10px;
+  transition: all 0.3s ease-out 0s;
+  margin-left: 11px;
+  line-height: 14px;
+}
+}
