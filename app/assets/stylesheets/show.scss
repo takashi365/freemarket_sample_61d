@@ -1,0 +1,21 @@
+.iteme_page_main{
+  padding: 24px 40px 40px;
+  background: #fff;
+  margin: 40px auto 0;
+  width: 700px;
+  &__name{
+    font-size: 24px;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 1.4;
+  }
+  &__view{
+    margin: 16px 0 0;
+  }
+  &__price{
+    color: $black;
+    border-width: 0;
+    text-align: center;
+    margin: 24px 0 0;
+  }
+}
