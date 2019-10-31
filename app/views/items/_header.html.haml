@@ -38,6 +38,8 @@
             =link_to 'やることリスト'
         .headers__bottom__right__mypage.flex
           .headers__bottom__right__mypage__image
-            =image_tag 'user_icon.png',class:'user_icon'
+            =link_to users_path do
+              =image_tag 'user_icon.png',class:'user_icon'
           .headers__bottom__right__mypage__text
-            =link_to 'マイページ'
+            =link_to users_path do
+              マイページ
