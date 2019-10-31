@@ -1,0 +1,251 @@
+a{
+  color: $blue;
+  text-decoration: none;
+}
+.sign-container{
+  padding: 0 0 220px;
+}
+.sign-header{
+  height: 128px;
+  text-align: center;
+  h1{
+    display: inline-block;
+  }
+  a{
+    width: 185px;
+    height: 49px;
+    line-height: 49px;
+    display: inline-block;
+    margin: 0 8px 0 0;
+  }
+}
+.signup-bar{
+  padding: 40px 0 0 44px;
+  border: 0;
+  vertical-align: top;
+  display: inline-block;
+  font-size: 0;
+  text-align: center;
+  ol{
+    margin: o;
+    list-style: none;
+    li{
+      margin: 0 40px 0 0;
+      min-width: 60px;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      font-size: 12px;
+    }
+    li.active{
+      font-weight: 600;
+      color: $btn;
+      .progress-status{
+        background: $btn;
+      }
+    }
+  }
+}
+.progress-status{
+  width: 12px;
+  height: 12px;
+  margin: 8px auto 0;
+  border-radius: 50%;
+  background: #ccc;
+}
+.progress-status:before,
+.progress-status:after{
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+}
+.progress-status:before {
+  right: 50%;
+}
+.progress-bar li:first-child .progress-status:before {
+  display: none;
+}
+.progress-status:after {
+  left: 50%;
+}
+.after-del:after{
+  display: none;
+}
+.l-single-container{
+  width: 700px;
+  margin: 0 auto;
+  background: $white;
+}
+.registration{
+  font-size: 22px;
+  padding: 32px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.l-single-inner{
+  padding: 24px 16px 40px;
+  border-top: 1px solid #f5f5f5;
+  p{
+    margin: 8px 0 0;
+    line-height: 1.5;
+  }
+}
+.l-chapter-sub-head{
+  text-align: left;
+  font-weight: 600;
+}
+.l-single-content{
+  max-width: 343px;
+  margin: 0 auto;
+  p:first-child{
+    margin: 0;
+    padding: 0;
+  }
+  p.l-single-text{
+    margin: 8px 0 0;
+    padding: 0;
+    font-size: 14px;
+  }
+  p{
+    margin: 8px 0 0;
+    line-height: 1.5;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+.input-default{
+  width: 100%;
+  margin: 8px 0 0;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border:1px solid #ccc;
+  background: $white;
+  line-height: 1.5;
+  font-size: 16px;
+}
+button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="reset"], [type="search"], [type="submit"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], select, textarea{
+  min-height: 1.5em;
+}
+.input-default.half:first-of-type{
+  margin-right: 8px;
+}
+.input-default.half{
+  width: calc(50% - 6px);
+  display: inline-block;
+}
+.form-group:first-child{
+  margin:0
+}
+label{
+  display: inline-block;
+}
+.form-group{
+  margin: 40px 0 0;
+  label{
+    font-weight: 600;
+  }
+}
+.form-require, .form-arbitrary, .message-is-seller, .news-private {
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+.form-require {
+  background: #ea352d;
+}
+.text-center{
+  text-align: center;
+}
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+  margin: 24px 0 0;
+}
+.form-info-text{
+  margin: 8px 0 0;
+  color: #888;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.birthday-select-wrap{
+  width: 76px;
+}
+.select-default {
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.l-chapter-sub-head {
+  font-size: 16px;
+}
+
+.btn-red{
+  margin: 24px 0 0;
+  background: $btn;
+  border: 1px solid $btn;
+  color: $white;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.single-footer{
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  z-index: 1;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  a{
+    display: block;
+    color: #333;
+  }
+  ul{
+    font-size: 0;
+  }
+  li:first-child{
+    margin: 0;
+  }
+  li{
+    display: inline-block;
+    margin: 16px 0 0;
+    font-size: 12px;
+  }
+}
+.greymercari{
+  width: 80px;
+  height: 65px;
+}
+.flex-box{
+  display: flex;
+}
+
+select{
+  width: 100px;
+}
