@@ -2,7 +2,7 @@
   padding: 24px 40px 40px;
   background: #fff;
   margin: 40px auto 0;
-  width: 700px;
+  width: 620px;
   &__name{
     font-size: 24px;
     text-align: center;
@@ -12,10 +12,126 @@
   &__view{
     margin: 16px 0 0;
   }
-  &__price{
+}
+.iteme_page_main__price{
+  margin: 24px 0 0;
+  text-align: center;
+  &__yen{
+  margin: 0 16px 0 0;
+  font-size: 50px;
+  font-weight: 600;
+  display: inline-block;
+  }
+  &__tex{
+    font-size: 10px;
+    display: inline-block;
+  }
+  &__postage{
+    font-size: 16px;
+    display: inline-block;
+  }
+}
+.buy_btn{
+  font-size: 24px;
+  line-height: 60px;
+  margin-top: 16px;
+  background: $red;
+  color: $white;
+  text-align: center;
+  font-weight: 600;
+}
+.item_buyer_comment{
+  padding: 32px 0 0;
+  line-height: 1.5;
+  font-size: 18px;
+  white-space: pre-wrap;
+}
+.item_btn_list{
+  margin: 16px 0 0;
+  font-size: 0;
+}
+.item_btn_list_left{
+  float: left;
+  &__like{
+    min-height: 1.5em;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 40px;
+    transition: all ease-out .3s;
     color: $black;
-    border-width: 0;
-    text-align: center;
-    margin: 24px 0 0;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    font-size: 14px;
+  }
+  &__inappropriate{
+    min-height: 1.5em;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 40px;
+    transition: all ease-out .3s;
+    color: $black;
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    font-size: 14px;
+    margin: 0 0 0 16px;
+  }
+}
+
+.item_btn_list_relief{
+  margin-top: 8px;
+  float: right;
+  font-size: 14px;
+  color: $blue;
+
+}
+
+.item_comments{
+  width: 700px;
+  margin: 8px auto;
+  background:$white;
+  &__texts{
+    padding: 24px;
+  }
+}
+.item_comments_note{
+  padding: 8px;
+    font-size: 14px;
+    background: #fff6de;
+}
+.item_comments_textarea{
+  margin: 8px 0 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 104px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.item_comments_btn{
+  width: 100%;
+  margin: 8px 0 0;
+  text-align: center;
+  background: #aaa;
+  border: 1px solid ;
+  line-height: 48px;
+  color: $white;
+  border: 1px solid #aaa;
+}
+.items_select{
+  margin: 24px auto 0;
+  width: 700px;
+  color:$blue;
+  position: relative;
+  &__left{
+    display: inline-block;
+  }
+  &__right{
+    display: inline-block;
+    position: absolute;
+    right: 0;
   }
 }

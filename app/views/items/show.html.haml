@@ -1,10 +1,46 @@
 = render 'header'
-.iteme_page_main
+.iteme_page_main.clearfix
   .iteme_page_main__name
     商品詳細
   .iteme_page_main__view
   .iteme_page_main__price
     .iteme_page_main__price__yen
+      ¥3,000
     .iteme_page_main__price__tex
+      （税込）
     .iteme_page_main__price__postage
+      送料込み
+  .buy_btn
+    購入画面に進む
+  .item_buyer_comment
+    こちらの表品は、
+    新品の商品です。
+    サイズ:幅5.5×奥行5×高さ21cm
+    電源:AC100-240V
+    消費電力:22-25W
+    温度調節機能:1段階(180℃)
+    商品重量:約215g
+  .item_btn_list.clearfix
+    .item_btn_list_left
+      .item_btn_list_left__like
+        =fa_icon 'heart'
+        いいね！ 0
+      .item_btn_list_left__inappropriate
+        不適切な商品の報告
+    .item_btn_list_relief
+      =fa_icon 'lock'
+      あんしん・あんぜんへの取り組み
+.item_comments.clearfix
+  .item_comments__texts
+    .item_comments_note
+      相手のことを考えて丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %input.item_comments_textarea(type="text")
+    .item_comments_btn
+      コメントする
+.items_select.clearfix.flex
+  .items_select__left
+    ＜Ｔシャツ レディース
+  .items_select__right
+    編み棒セット/編み針セット＞
+
 -# = render 'footer'
