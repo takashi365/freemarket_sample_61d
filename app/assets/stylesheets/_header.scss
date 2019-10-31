@@ -1,12 +1,11 @@
 .header{
-
   width: 100%;
   background: $white;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 .headers{
   width: 1020px;
-  margin: 4px auto;
+  margin: 0 auto;
   padding: 8px 0px 0px;
 }
 .headers__up{
@@ -36,7 +35,7 @@
       height: 40px;
       position: absolute;
       right: 0px;
-      top: 8px;
+      top: 14px;
       width: 40px;
       &__icon{
       color: $black;
@@ -54,16 +53,10 @@
   position: relative;
 }
 .headers__bottom{
-  -webkit-box-pack: justify;
-  justify-content: space-between;
   margin-top: 8px;
-  vertical-align: baseline;
   margin: 0px;
   padding: 0px;
   border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
   font: inherit;
   height: 44px;
   padding-bottom: 6px;
