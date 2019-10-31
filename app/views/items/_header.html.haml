@@ -38,6 +38,14 @@
             =link_to 'やることリスト'
         .headers__bottom__right__mypage.flex
           .headers__bottom__right__mypage__image
-            =image_tag 'user_icon.png',class:'user_icon'
+            =link_to users_path do
+              =image_tag 'user_icon.png',class:'user_icon'
           .headers__bottom__right__mypage__text
-            =link_to 'マイページ'
+            =link_to users_path do
+              マイページ
+              -# ここから下条件分岐
+          .headers__bottom__right__newuser
+            =link_to entry_start_signup_index_path do
+              新規会員登録
+          .headers__bottom__right__login
+            ログイン
