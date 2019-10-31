@@ -11,6 +11,11 @@
 .flex{
   display: flex;
 }
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 body {
   background-color: $grey;
   box-sizing: border-box;
@@ -43,3 +48,5 @@ a{
 @import "config/exhibit";
 @import "registration";
 @import "footer";
+@import "mypage";
+@import "mypage-side";
