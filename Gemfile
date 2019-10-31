@@ -43,6 +43,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -68,6 +69,5 @@ gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'devise'
 gem "jquery-rails"
-gem 'recaptcha'
-gem 'dotenv'
+gem 'recaptcha', require: "recaptcha/rails"
 gem 'active_hash'
