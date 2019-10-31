@@ -68,3 +68,6 @@ gem 'kaminari'
 gem 'font-awesome-rails'
 gem 'devise'
 gem "jquery-rails"
+gem 'recaptcha'
+gem 'dotenv'
+gem 'active_hash'

@@ -20,4 +20,16 @@ class SignupController < ApplicationController
     session[:first_name_kana] = user_params[:first_name_kana]
     @user = User.new # 新規インスタンス作成
   end
+
+  def sms_check
+  end
+
+  def address_input
+  end
+
+  def howto_paiement
+  end
+
+  def entry_done
+  end
 end
