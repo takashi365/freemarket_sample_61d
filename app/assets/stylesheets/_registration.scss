@@ -1,5 +1,5 @@
 .sign-container{
-  padding: 0 0 220px;
+  padding: 0 0 240px;
 }
 .sign-header{
   height: 128px;
@@ -86,9 +86,7 @@
 .after-del:after{
   display: none;
 }
-.single-main{
 
-}
 .l-single-container{
   width: 700px;
   margin: 0 auto;
@@ -188,6 +186,12 @@ label{
 }
 .text-center{
   text-align: center;
+}
+.registration-form{
+  a{
+    color: $blue;
+    text-decoration: none;
+  }
 }
 .l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
   margin: 24px 0 0;

@@ -23,6 +23,36 @@
     %section.l-single-container
       %h2.registration.l-single-head
         電話番号認証
+      %form.l-single-inner.registration-form{action: "http://localhost:3000/signup/address_input", method: "GET"}
+        %input{name: "after_save_callback", type: "hidden", value: ""}
+        .l-single-content
+          .form-group
+            %label{for: "phone_number"} 認証番号
+            %input.input-default{name: "phone_number", placeholder: "認証番号を入力", type: "tel", value: ""}
+          %p SMSで届いた認証番号を入力してください。
+          %button.btn-default.btn-red{type: "submit"} 認証して完了
+        %input{name: "__csrf_value", type: "hidden", value: ""}
+        %input{name: "id", type: "hidden", value: ""}
+
+      %form.l-single-inner.registration-form{action: "http://localhost:3000/signup/address_input", method: "GET"}
+        %input{name: "after_save_callback", type: "hidden", value: ""}
+        .l-single-content
+          .form-group
+            %label{for: "phone_number"} 30秒経っても認証番号が届かない方へ
+          %p 電話で認証番号を聞くこともできます。
+          %button.btn-default.btn-red{type: "submit"} 電話で認証番号を聞く（通話無料）
+        %input{name: "__csrf_value", type: "hidden", value: ""}
+        %input{name: "id", type: "hidden", value: ""}
+
+      .l-single-inner.registration-form
+        .l-single-content
+          %h3.l-chapter-sub-head 認証番号を再送することもできます。もう一度電話番号を入力して下さい。
+          %p
+            = link_to "電話番号を再度入力する", "/"
+          %p.l-single-text
+            ※SMSが届かない場合は
+            = link_to "SMS受信設定", "/", target: "_blank"
+            を確認して、もう一度電話番号を入力してください。
 
   %footer.single-footer
     %nav.footernav
