@@ -6,6 +6,7 @@
   text-align: center;
   h1{
     display: inline-block;
+    margin: 40px 0 0;
   }
   a{
     width: 185px;
@@ -15,6 +16,13 @@
     margin: 0 8px 0 0;
   }
 }
+.head-a{
+  .mercari{
+    width: 185px;
+    height: 49px;
+  }
+}
+
 .signup-bar{
   padding: 40px 0 0 44px;
   border: 0;
@@ -33,13 +41,19 @@
       display: inline-block;
       font-size: 12px;
     }
-    li.active{
-      font-weight: 600;
-      color: $btn;
-      .progress-status{
-        background: $btn;
-      }
-    }
+  }
+}
+
+.active{
+  font-weight: 600;
+  color: $btn;
+  .progress-status,.progress-status::before{
+    background: $btn;
+  }
+}
+.through{
+  .progress-status,.progress-status::before,.progress-status:after{
+    background: $btn;
   }
 }
 .progress-status{
@@ -71,6 +85,9 @@
 }
 .after-del:after{
   display: none;
+}
+.single-main{
+
 }
 .l-single-container{
   width: 700px;
@@ -241,6 +258,7 @@ label{
 }
 .footernav{
   padding: 20px;
+  display: block;
 }
 .greymercari{
   width: 80px;
@@ -253,4 +271,35 @@ label{
 
 select{
   width: 100px;
+}
+.btn-mail{
+  color: $white;
+  background-color: $btn;
+  position: relative;
+}
+.btn-default{
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: inherit;
+}
+.btn-sns{
+  position: relative;
+  &__face{
+    background-color: #385185;
+    margin: 16px 0 0;
+    color: $white;
+  }
+  &__google{
+      margin: 16px 0 0;
+      background: #fff url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
+      border: #979797 solid 1px;
+      color: #333
+  }
 }
