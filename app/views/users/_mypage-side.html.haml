@@ -72,5 +72,5 @@
         %a.mypage-nav-list-item
           電話番号の確認
       %li
-        %a.mypage-nav-list-item
-          ログアウト
+        .mypage-nav-list-item
+          = link_to 'ログアウト', user_path(@user.id)
