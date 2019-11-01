@@ -54,8 +54,8 @@
     %h3.mypage-nav-head 設定
     %ul.mypage-nav-list
       %li
-        %a.mypage-nav-list-item
-          プロフィール
+        .mypage-nav-list-item
+          = link_to 'プロフィール', edit_user_path(@user.id)
       %li
         %a.mypage-nav-list-item
           住所変更

@@ -1,0 +1,26 @@
+= render 'items/header'
+= render 'items/exhibit'
+%nav.bread-crumbs
+  %ul
+    %li
+      %span メルカリ
+      %i.icon-arrow-right
+    %li
+      %span マイページ
+      %i.icon-arrow-right
+    %li
+      %span プロフィール
+%main.mypage-container.clearfix
+  .l-content
+    %section.l-chapter-container
+      %h2.l-chapter-head プロフィール
+      %form
+        .setting-profile-icon
+          %figure
+            = image_tag 'user_icon.png'
+          %input.input-default{placeholder:  "例)AYA☆セール中", type:  "text"}/
+        .setting-profile-content
+          %textarea.textarea-default{placeholder:  "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+          %button.btn-default.btn-red 変更する
+  = render 'mypage-side'
+= render 'items/footer'
