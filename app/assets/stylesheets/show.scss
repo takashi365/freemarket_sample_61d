@@ -20,12 +20,11 @@
   max-width: 300px;
   min-height: 375px;
   background: #fafafa;
-}
-.iteme_page_main__view_left_image{
+&__image{
   width: 300px;
   height: 300px;
   background: palevioletred;
-
+}
 }
 .iteme_page_main__view_left_imagess{
   &__image{
