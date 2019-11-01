@@ -68,11 +68,11 @@
 
 .item_page_face{
   display: inline-block;
+  margin: 0 ;
+  display: flex;
   margin: 8px 0 0 16px;
-  &__icon{
-    content: '\e016';
-    font-size: 16px;
-    vertical-align: middle;
+  &__num{
+    margin-left: 5px;
   }
 }
 
