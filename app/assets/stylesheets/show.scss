@@ -42,8 +42,39 @@
   height: 420px;
   margin: 0 auto;
   width: 100%;
+  &__box{
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
+}
+.iteme_page_main__view_right__box_left{
+  width: 39%;
+  text-align: left;
+  font-weight: 400;
+  background: #fafafa;
+  padding: 8px;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+}
+.iteme_page_main__view_right__box_right{
+  width: 61%;
+  background: $white;
+  font-weight: 400;
+  padding: 8px;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
 }
 
+.item_page_face{
+  display: inline-block;
+  margin: 8px 0 0 16px;
+  &__icon{
+    content: '\e016';
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}
 
 
 
