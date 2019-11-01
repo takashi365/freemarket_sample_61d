@@ -2,7 +2,21 @@
 .iteme_page_main.clearfix
   .iteme_page_main__name
     商品詳細
-  .iteme_page_main__view
+  .iteme_page_main__view.clearfix
+    .iteme_page_main__view_left
+      .iteme_page_main__view_left_image
+      .iteme_page_main__view_left_imagess.flex
+        .iteme_page_main__view_left_imagess__image
+          1
+        .iteme_page_main__view_left_imagess__image
+          2
+        .iteme_page_main__view_left_imagess__image
+          3
+        .iteme_page_main__view_left_imagess__image
+          4
+        .iteme_page_main__view_left_imagess__image
+          5
+    .iteme_page_main__view_right
   .iteme_page_main__price
     .iteme_page_main__price__yen
       ¥3,000
@@ -42,5 +56,82 @@
     ＜Ｔシャツ レディース
   .items_select__right
     編み棒セット/編み針セット＞
-
--# = render 'footer'
+.items_iconss.clearfix
+  .items_iconss__line
+  .items_icons.flex
+    .items_iconss
+      .items_icons__facebook
+        =fa_icon 'facebook-square',class: 'items_icons__facebook'
+      .items_icons__twitter
+        =fa_icon 'twitter',class: 'items_icons__twitter'
+      .items_icons__pinterest
+        =fa_icon 'pinterest',class: 'items_icons__pinterest'
+.user_another_items
+  .user_another_items__title
+    〇〇さんのその他の出品
+  .user_another_item.clearfix.flex
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1002
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxsss
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1003
+      .item_list_box_item__text
+        Tシャツ
+  .user_another_item.clearfix.flex
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxsss
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+.item_page_bottom
+  .item_page_bottom__box.flex
+    .item_page_bottom_merkari_box.flex
+      .item_page_bottom_merkari
+        メルカリ
+      .item_page_bottom_merkari__right
+        =fa_icon 'chevron-right',class:'item_page_bottom_merkari__right'
+    .item_page_bottom_merkari__second
+      UNIQLOのパンツ
+= render 'footer'
