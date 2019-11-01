@@ -180,7 +180,7 @@
       }
     &-list{
         border-top: 1px solid #eee;
-        a.mypage-nav-list-item{
+        .mypage-nav-list-item{
           box-sizing: border-box;
           position: relative;
           display: block;
@@ -189,6 +189,9 @@
           background-color: #fff;
           color: #333;
           font-size: 14px;
+          a{ 
+            color: #333;
+          }
         }
       }
     }

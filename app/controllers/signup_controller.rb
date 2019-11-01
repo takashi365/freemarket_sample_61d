@@ -4,12 +4,6 @@ class SignupController < ApplicationController
   end
 
   def member_infomation
-    # step1で入力された値をsessionに保存
-    session[:nickname] = user_params[:nickname]
-    session[:email] = user_params[:email]
-    session[:password] = user_params[:password]
-    session[:password_confirmation] = user_params[:password_confirmation]
-    @user = User.new # 新規インスタンス作成
   end
 
   def phone_number
