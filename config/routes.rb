@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "items#index"
   resources :items
-  resources :users
+  resources :users do
+    get 'method_of_payment'
+  end
   resources :signup do
     collection do
       get 'entry_start'

@@ -161,13 +161,6 @@
         display: inline-block;
         color: #888;
       }
-      .mypage-item-link .icon-arrow-right {
-        position: absolute;
-        top: 50%;
-        right: 16px;
-        -webkit-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-      }
 
 .mypage-container__side {
   float: left;
@@ -192,6 +185,16 @@
           a{ 
             color: #333;
           }
+          i.fa-angle-right {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            color: #ccc;
+            -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            -webkit-transition: all ease-out .2s;
+            transition: all ease-out .2s;
+            }
         }
       }
     }
