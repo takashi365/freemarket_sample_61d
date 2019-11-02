@@ -23,7 +23,7 @@
     %section.l-single-container
       %h2.registration.l-single-head
         電話番号の確認
-      %form.l-single-inner.registration-form{action: "http://localhost:3000/signup/sms_check", method: "GET"}
+      %form.l-single-inner.registration-form{action: "./sms_check", method: "GET"}
         %input{name: "after_save_callback", type: "hidden", value: ""}
         .l-single-content
           .form-group

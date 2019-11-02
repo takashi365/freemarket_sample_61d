@@ -279,11 +279,7 @@ label{
 select{
   width: 100px;
 }
-.btn-mail{
-  color: $white;
-  background-color: $btn;
-  position: relative;
-}
+
 .btn-default{
   border-radius: 4px;
   display: block;
@@ -296,17 +292,31 @@ select{
   text-align: center;
   box-sizing: inherit;
 }
-.btn-sns{
+.btn-mail{
+  color: $white;
+  background-color: $btn;
   position: relative;
+}
+.btn-sns{
   &__face{
     background-color: #385185;
     margin: 16px 0 0;
     color: $white;
+    position: relative;
+
   }
   &__google{
       margin: 16px 0 0;
-      background: #fff url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
+      background: #fff;
       border: #979797 solid 1px;
-      color: #333
+      color: #333;
+      position: relative;
   }
 }
+.sns-icon{
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  font-size: 20px;
+}
+

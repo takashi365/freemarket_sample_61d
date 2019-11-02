@@ -9,15 +9,16 @@
         新規会員登録
       .l-single-inner
         .l-single-content
-          .btn-default.btn-mail
-            %i.icon-mail
+          = link_to "./member_infomation" do
+            .btn-default.btn-mail
+              = fa_icon 'envelope-o', class:'sns-icon'
               メールアドレスで登録する
           .btn-default.btn-sns__face
-            %i.icon-mail
-              Facebookで登録する
+            = fa_icon 'facebook-official', class:'sns-icon'
+            Facebookで登録する
           .btn-default.btn-sns__google
-            %i.icon-mail
-              googleで登録する
+            = fa_icon 'google', class:'sns-icon'
+            googleで登録する
 
   %footer.single-footer
     %nav.footernav
