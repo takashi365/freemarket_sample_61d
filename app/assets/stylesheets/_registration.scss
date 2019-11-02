@@ -319,4 +319,33 @@ select{
   left: 15px;
   font-size: 20px;
 }
-
+.select-prefectures{
+  width: 378px;
+  height: 68px;
+  margin: 8px 0 0;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: white;
+  line-height: 1.5;
+  font-size: 16px;
+}
+select {
+  -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+  -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+  appearance: none; /* 標準のスタイルを無効にする */
+  cursor: pointer; /* マウスカーソルの形を指定する */
+  }
+  ::-ms-expand { /* select要素のデザインを無効にする（IE用） */
+  display: none;
+  }
+  .pulldown{
+    position: absolute;
+    right: -25px;
+    bottom: 15px;
+    font-size: 40px;
+    color: darkgray;
+  }
+  .posi-re{
+    position: relative;
+  }
