@@ -1,0 +1,192 @@
+= render 'header'
+.iteme_page_main.clearfix
+  .iteme_page_main__name
+    商品詳細
+  .iteme_page_main__view.clearfix
+    .iteme_page_main__view_left
+      .iteme_page_main__view_left_image
+      .iteme_page_main__view_left_imagess.flex
+        .iteme_page_main__view_left_imagess__image
+          1
+        .iteme_page_main__view_left_imagess__image
+          2
+        .iteme_page_main__view_left_imagess__image
+          3
+        .iteme_page_main__view_left_imagess__image
+          4
+        .iteme_page_main__view_left_imagess__image
+          5
+    .iteme_page_main__view_right.clearfix
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          出品者
+        .iteme_page_main__view_right__box_right
+          〇〇さん
+          .item_page_faces.flex
+            .item_page_face.flex
+              .item_page_face__icon
+                =image_tag 'laugh.png',class:'laugh_icon'
+              .item_page_face__num
+                0
+            .item_page_face.flex
+              .item_page_face__icon
+                =image_tag 'meh.png',class:'meh_icon'
+              .item_page_face__num
+                0
+            .item_page_face.flex
+              .item_page_face__icon
+                =image_tag 'frown.png',class:'laugh_icon'
+              .item_page_face__num
+                0
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          カテゴリー
+        .iteme_page_main__view_right__box_right
+          レディース
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          ブランド
+        .iteme_page_main__view_right__box_right
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          商品の状態
+        .iteme_page_main__view_right__box_right
+          新品、未使用
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          配送料の負担
+        .iteme_page_main__view_right__box_right
+          送料込み
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          配送の方法
+        .iteme_page_main__view_right__box_right
+          ゆうメール
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          配送元地域
+        .iteme_page_main__view_right__box_right
+          愛知県
+      .iteme_page_main__view_right__box.flex
+        .iteme_page_main__view_right__box_left
+          発送日の目安
+        .iteme_page_main__view_right__box_right
+          １〜２日で発送
+  .iteme_page_main__price
+    .iteme_page_main__price__yen
+      ¥3,000
+    .iteme_page_main__price__tex
+      （税込）
+    .iteme_page_main__price__postage
+      送料込み
+  .buy_btn
+    購入画面に進む
+  .item_buyer_comment
+    こちらの表品は、
+    新品の商品です。
+    サイズ:幅5.5×奥行5×高さ21cm
+    電源:AC100-240V
+    消費電力:22-25W
+    温度調節機能:1段階(180℃)
+    商品重量:約215g
+  .item_btn_list.clearfix
+    .item_btn_list__left
+      .item_btn_list__left__like
+        =fa_icon 'heart'
+        いいね！ 0
+      .item_btn_list__left__inappropriate
+        不適切な商品の報告
+    .item_btn_list__relief
+      =fa_icon 'lock'
+      あんしん・あんぜんへの取り組み
+.item_comments.clearfix
+  .item_comments__texts
+    .item_comments__note
+      相手のことを考えて丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %input.item_comments__textarea(type="text")
+    .item_comments__btn
+      コメントする
+.items_select.clearfix.flex
+  .items_select__left
+    ＜Ｔシャツ レディース
+  .items_select__right
+    編み棒セット/編み針セット＞
+.items_iconss.clearfix
+  .items_iconss__line
+  .items_icons.flex
+    .items_iconss
+      .items_icons__facebook
+        =fa_icon 'facebook-square',class: 'items_icons__facebook'
+      .items_icons__twitter
+        =fa_icon 'twitter',class: 'items_icons__twitter'
+      .items_icons__pinterest
+        =fa_icon 'pinterest',class: 'items_icons__pinterest'
+.user_another_items
+  .user_another_items__title
+    〇〇さんのその他の出品
+  .user_another_item.clearfix.flex
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1002
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxsss
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1003
+      .item_list_box_item__text
+        Tシャツ
+  .user_another_item.clearfix.flex
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxs
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+    .user_another_item_boxsss
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
+.item_page_bottom
+  .item_page_bottom__box.flex
+    .item_page_bottom_merkari_box.flex
+      .item_page_bottom_merkari
+        メルカリ
+      .item_page_bottom_merkari__right
+        =fa_icon 'chevron-right',class:'item_page_bottom_merkari__right'
+    .item_page_bottom_merkari__second
+      UNIQLOのパンツ
+= render 'footer'
