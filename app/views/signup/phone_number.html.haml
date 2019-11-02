@@ -1,0 +1,51 @@
+.sign-container
+  %header.sign-header
+    %h1
+      = link_to image_tag('mercari.png', class:'mercari'), root_path
+    %nav.progress-bar.signup-bar
+      %ol.clearfix
+        %li.through
+          会員情報
+          .progress-status
+        %li.active
+          電話番号認証
+          .progress-status
+        %li
+          お届け先住所入力
+          .progress-status
+        %li
+          支払い方法
+          .progress-status
+        %li
+          完了
+          .progress-status.after-del
+  %main
+    %section.l-single-container
+      %h2.registration.l-single-head
+        電話番号の確認
+      %form.l-single-inner.registration-form{action: "http://localhost:3000/signup/sms_check", method: "GET"}
+        %input{name: "after_save_callback", type: "hidden", value: ""}
+        .l-single-content
+          .form-group
+            %label{for: "phone_number"} 携帯電話の番号
+            %input.input-default{name: "phone_number", placeholder: "携帯電話の番号を入力", type: "tel", value: ""}
+          %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+          %button.btn-default.btn-red{type: "submit"} SMSを送信する
+          %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+          .form-group.text-right
+            = link_to "電話番号の確認が必要な理由", "/", target: "blank"
+        %input{name: "__csrf_value", type: "hidden", value: ""}
+        %input{name: "id", type: "hidden", value: ""}
+
+  %footer.single-footer
+    %nav.footernav
+      %ul
+        %li
+          プライバシーポリシー
+        %li
+          メルカリ利用規約
+        %li
+          特定商取引に関する表記
+    = link_to image_tag('logo-gray.svg', class:'greymercari'), root_path, class: "footerlogo"
+    %p
+      © 2019 Mercari
