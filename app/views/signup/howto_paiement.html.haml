@@ -23,6 +23,37 @@
     %section.l-single-container
       %h2.registration.l-single-head
         支払い方法
+      %form.l-single-inner.registration-form{action: "./howto_paiement", method: "GET", novalidate: "novalidate"}
+        %input{name: "__csrf_value", type: "hidden", value: ""}/
+        .l-single-content
+          .form-group
+            %label{for: "post_number"} カード番号
+            %span.form-require 必須
+            %input.input-default{name: "post_number", placeholder: "半角英数のみ", type: "text", value: ""}
+          .credit-box.flex-box
+            = image_tag('logo_visa.gif', class: 'credit')
+            = image_tag('logo_mastercard.gif', class:'credit')
+            = image_tag('jcb-logomark-img-02.gif', class:'credit')
+            = image_tag('amex-logomark-img-05.gif', class:'credit')
+            = image_tag('diners-logomark-img-02.gif', class:'credit')
+            = image_tag('discover-logomark-img-07.gif', class:'credit')
+          .form-group.posi-re
+            %label{for: "post_number"} 有効期限
+            %span.form-require 必須
+            = fa_icon 'chevron-down', class: "pulldown-crd"
+            %select.select-prefectures.half{name: "prefectures"}
+              %option{value: ""} ー
+            = fa_icon 'chevron-down', class: "pulldown"
+            %select.select-prefectures.half{name: "prefectures"}
+              %option{value: ""} ー
+          .form-group
+            %label{for: "post_number"} セキュリティコード
+            %span.form-require 必須
+            %input.input-default{name: "post_number", placeholder: "カード背面４桁もしくは３桁の番号", type: "text", value: ""}
+          .form-help.text-right
+            = link_to("/", target: "_blank") do
+              = fa_icon 'question-circle'
+              本人情報の登録について
 
   %footer.single-footer
     %nav.footernav
