@@ -9,9 +9,10 @@
         新規会員登録
       .l-single-inner
         .l-single-content
-          .btn-default.btn-mail
-            = fa_icon 'envelope-o', class:'sns-icon'
-            メールアドレスで登録する
+          = link_to "./member_infomation" do
+            .btn-default.btn-mail
+              = fa_icon 'envelope-o', class:'sns-icon'
+              メールアドレスで登録する
           .btn-default.btn-sns__face
             = fa_icon 'facebook-official', class:'sns-icon'
             Facebookで登録する
