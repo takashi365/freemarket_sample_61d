@@ -1,11 +1,20 @@
 class UsersController < ApplicationController
+  before_action :set_users
+
   def index
-    @user = User.find(1)
   end
+  
   def show
-    @user = User.find(1)
   end
+
   def edit
+  end
+
+  def method_of_payment
+  end
+
+  def set_users
     @user = User.find(1)
   end
+
 end

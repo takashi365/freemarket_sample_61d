@@ -60,8 +60,8 @@
         %a.mypage-nav-list-item
           住所変更
       %li
-        %a.mypage-nav-list-item
-          支払い方法
+        .mypage-nav-list-item
+          = link_to '支払い方法', user_method_of_payment_path(@user.id)
       %li
         %a.mypage-nav-list-item
           メール/パスワード
