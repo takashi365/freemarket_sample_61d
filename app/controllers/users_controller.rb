@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_users
+  before_action :set_user
 
   def index
   end
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def method_of_payment
   end
 
-  def set_users
+  def set_user
     @user = User.find(1)
   end
 

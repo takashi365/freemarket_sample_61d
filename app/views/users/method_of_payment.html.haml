@@ -4,10 +4,10 @@
   %ul
     %li
       %span メルカリ
-      %i.icon-arrow-right
+      = fa_icon "angle-right"
     %li
       %span マイページ
-      %i.icon-arrow-right
+      = fa_icon "angle-right"
     %li
       %span 支払い方法
 %main.mypage-container.clearfix
@@ -22,11 +22,11 @@
         %section.settings-add-card
           .l-single-content
             %a.btn-default.btn-red.submit_button
-              %i.icon-card>
+              = fa_icon "credit-card"
               クレジットカードを追加する
         .settings-not-regist
           %a
             %span 支払い方法について
-            %i.icon-arrow-right
+            = fa_icon "angle-right"
   = render 'mypage-side'
 = render 'items/footer'

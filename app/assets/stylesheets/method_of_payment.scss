@@ -2,10 +2,12 @@
   padding: 24px 0;
   border-bottom: 1px solid #eee;
 }
-.settings-not-regist a {
+.settings-not-regist {
   display: block;
   margin: 40px 0 0;
   text-align: right;
+  a {
   color: #0099e8;
   text-decoration: none;
+    }
 }
