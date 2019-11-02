@@ -23,7 +23,7 @@
     %section.l-single-container
       %h2.registration.l-single-head
         支払い方法
-      %form.l-single-inner.registration-form{action: "./howto_paiement", method: "GET", novalidate: "novalidate"}
+      %form.l-single-inner.registration-form{action: "./entry_done", method: "GET", novalidate: "novalidate"}
         %input{name: "__csrf_value", type: "hidden", value: ""}/
         .l-single-content
           .form-group
@@ -54,6 +54,7 @@
             = link_to("/", target: "_blank") do
               = fa_icon 'question-circle'
               本人情報の登録について
+          %button.btn-default.btn-red{type: "submit"} 次へ進む
 
   %footer.single-footer
     %nav.footernav
