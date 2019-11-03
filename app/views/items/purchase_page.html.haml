@@ -1,0 +1,44 @@
+.sign-container
+  %header.sign-header
+    %h1#startlogo
+      = link_to image_tag('mercari.png', class:'mercari'), root_path, class: "head-a"
+  %main.single-main
+    %section.l-single-container
+      %h2.registration
+        購入内容の確認
+      .l-single-inner
+        .l-single-content
+          .purchase_image
+          .purchase_title
+            タイトスカート
+          .purchase_content
+            .purchase_content__price
+              .purchase_content__price__left
+                ¥700
+              .purchase_content__price__right
+                送料込み
+            .purchase_content__point
+              .purchase_content__point__text
+                ポイントはありません
+            .purchase_content__prices
+              .purchase_content__prices__left
+                支払い金額
+              .purchase_content__prices__right
+                ￥700
+            .purchase_content__red.clearfix
+              配送先と支払い方法の入力を完了して下さい。
+            .purchase_content__btn
+              購入する
+
+  %footer.single-footer
+    %nav.footernav
+      %ul.clearfix
+        %li
+          プライバシーポリシー
+        %li
+          メルカリ利用規約
+        %li
+          特定商取引に関する表記
+    = link_to image_tag('logo-gray.svg', class:'greymercari'), root_path, class: "footerlogo"
+    %p
+      © 2019 Mercari
