@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "items#index"
   resources :items do
     get 'purchase_page'
+    get 'purchase_pay'
   end
   resources :users do
     get 'method_of_payment'

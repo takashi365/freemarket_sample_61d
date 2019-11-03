@@ -28,7 +28,7 @@
             .purchase_content__red.clearfix
               配送先と支払い方法の入力を完了して下さい。
             .purchase_content__btn
-              =link_to root_path do
+              =link_to '/items/:item_id/purchase_pay' do
                 購入する
         .purchase_address
           .purchase_address__content

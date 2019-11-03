@@ -9,4 +9,7 @@ class ItemsController < ApplicationController
 
   def purchase_page
   end
+
+  def purchase_pay
+  end
 end
