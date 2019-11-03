@@ -57,7 +57,9 @@
     margin: 40px 0 0;
   }
   &__text{
-    padding: 40px;
+    a{
+      color: $blue;
+    }
   }
   &__btn{
     margin: 40px 0 0;
@@ -79,6 +81,9 @@
     line-height: 48px;
     font-size: 14px;
     text-align: center;
+    a{
+      color: $white;
+    }
   }
 }
 .fontweigth{
