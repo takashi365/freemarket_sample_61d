@@ -114,6 +114,16 @@
   .mypage-item-list li:last-child {
     border: 0;
   }
+  .mypage-item-not-found {
+    padding: 160px 0 60px;
+    background-image: url( "logo-gray-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 78px 85px;
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+}
   .mypage-go-list a {
     display: block;
     height: 56px;
