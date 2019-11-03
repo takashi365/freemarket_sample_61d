@@ -1,0 +1,59 @@
+.sign-container
+  %header.sign-header
+    %h1#startlogo
+      = link_to image_tag('mercari.png', class:'mercari'), root_path, class: "head-a"
+  %main.single-main
+    %section.l-single-container
+      %h2.registration
+        商品の情報を入力
+      .exhibit_main
+        .exhibit_main_pagging
+          .exhibit_main_pagging__image.flex
+            .exhibit_main_pagging__image__left
+              出品画像
+            .exhibit_main_pagging__image__right
+              必須
+          .exhibit_main_pagging__up
+            最大10枚までアップロードできます
+          .exhibit_main_pagging__date
+            .exhibit_main_pagging__date__image
+            .exhibit_main_pagging__date__content
+              %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
+        .exhibit_box
+          .exhibit_box__name
+            .form-group
+            %label.fontweigth{for: "nickname"} 商品名
+            %span.form-require 必須
+            %input.input-default.width{name: "nickname", placeholder: "商品名(必須４０文字まで)", type: "text", value: ""}/
+          .exhibit_box__explanation
+            .form-group
+            %label.fontweigth{for: "nickname"} 商品の説明
+            %span.form-require 必須
+            %input.input-default.width.height{name: "nickname", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", type: "text", value: ""}/
+        .exhibit_box
+        .exhibit_box
+        .exhibit_box
+        .exhibit_box
+          .exhibit_box__text
+            禁止されている出品、行為を必ずご確認ください。
+            またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+            また、出品をもちまして加盟店規約に同意したことになります。
+          .exhibit_box__btn
+            出品する
+          .exhibit_box__back
+            もどる
+
+
+      
+  %footer.single-footer
+    %nav.footernav
+      %ul.clearfix
+        %li
+          プライバシーポリシー
+        %li
+          メルカリ利用規約
+        %li
+          特定商取引に関する表記
+    = link_to image_tag('logo-gray.svg', class:'greymercari'), root_path, class: "footerlogo"
+    %p
+      © 2019 Mercari

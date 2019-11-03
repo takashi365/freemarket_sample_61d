@@ -12,4 +12,7 @@ class ItemsController < ApplicationController
 
   def purchase_pay
   end
+  
+  def exhibit_page
+  end
 end
