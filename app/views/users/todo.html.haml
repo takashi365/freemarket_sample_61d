@@ -1,0 +1,28 @@
+= render 'items/header'
+= render 'items/exhibit'
+%nav.bread-crumbs
+  %ul
+    %li
+      %span メルカリ
+      = fa_icon "angle-right"
+    %li
+      %span マイページ
+      = fa_icon "angle-right"
+    %li
+      %span やることリスト
+%main.mypage-container.clearfix
+  .mypage-content
+    %section.mypage-tab-container-notification-todo
+      %ul.mypage-tabs
+        %li
+          %h3
+            %a お知らせ
+        %li.active
+          %h3
+            %a やることリスト
+      .tab-content
+        %ul#mypage-tab-todo.mypage-item-list.tab-pane.active
+          %li.mypage-item-not-found.bold 現在、やることリストはありません
+
+  = render 'mypage-side'
+= render 'items/footer' 
