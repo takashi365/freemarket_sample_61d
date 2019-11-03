@@ -2,7 +2,7 @@
   .headers
     .headers__up.flex
       .headers__up__image 
-        = image_tag 'mercari.png' ,class:'mercari'
+        =link_to (image_tag 'mercari.png' ,class:'mercari'),root_path
       .headers__up__searchs
         %input.headers__up__search{placeholder: "何かお探しですか？", type: "text"}
           .headers__up__search__btn
