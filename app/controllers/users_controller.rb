@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   def notification
   end
 
+  def todo
+  end
+
   def set_user
     @user = User.find(1)
   end
