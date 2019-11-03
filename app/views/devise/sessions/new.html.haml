@@ -1,0 +1,43 @@
+.sign-container
+  %header.sign-header
+    %h1#startlogo
+      = link_to image_tag('mercari.png', class:'mercari'), root_path, class: "head-a"
+
+  %main
+    .login-panel
+      .login-no-account
+        %p アカウントをお持ちでない方はこちら
+        = link_to "新規会員登録", entry_start_signup_index_path, class: "login-no-account__btn"
+
+      .l-single-inner
+        .l-single-content
+          .btn-default.btn-sns__face
+            = fa_icon 'facebook-official', class:'sns-icon'
+            Facebookでログイン
+          .btn-default.btn-sns__google
+            = fa_icon 'google', class:'sns-icon'
+            googleでログイン
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .login-form-inner
+          .form-group.text-center
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class:"input-default size-add"
+          .form-group__low.text-center
+            = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class:"input-default size-add"
+          .form-group.login-margin
+            = recaptcha_tags
+          = f.submit "ログイン", class: "btn-default__low btn-red low"
+          .form-group.padding-left
+            = link_to "パスワードをお忘れの方", "/", target: "_blank", class: "login-a"
+
+  %footer.single-footer
+    %nav.footernav
+      %ul.clearfix
+        %li
+          プライバシーポリシー
+        %li
+          メルカリ利用規約
+        %li
+          特定商取引に関する表記
+    = link_to image_tag('logo-gray.svg', class:'greymercari'), root_path, class: "footerlogo"
+    %p
+      © 2019 Mercari
