@@ -1,13 +1,14 @@
 .item_list_box__content.flex
   .item_list_box_item
-    .item_list_box_item__image
-      .image_price
-        .image_price__enn
-          ¥
-        .image_price__num
-          1001
-    .item_list_box_item__text
-      Tシャツ
+    =link_to "items/show" do
+      .item_list_box_item__image
+        .image_price
+          .image_price__enn
+            ¥
+          .image_price__num
+            1001
+      .item_list_box_item__text
+        Tシャツ
   .item_list_box_item
     .item_list_box_item__image
       .image_price

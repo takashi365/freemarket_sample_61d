@@ -28,7 +28,8 @@
             .purchase_content__red.clearfix
               配送先と支払い方法の入力を完了して下さい。
             .purchase_content__btn
-              購入する
+              =link_to item_purchase_pay_path do
+                購入する
         .purchase_address
           .purchase_address__content
             .purchase_address__content__top
@@ -52,10 +53,10 @@
               .purchase_address__content__top__day
                 09/21
               .purchase_address__content__top__cardname
-                VISA
+                =image_tag 'logo_visa.gif',class:'card'
                 
             .purchase_address__content__btn
-              変更する　＞
+              変更する ＞
 
   %footer.single-footer
     %nav.footernav
