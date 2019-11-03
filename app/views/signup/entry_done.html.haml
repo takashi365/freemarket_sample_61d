@@ -23,7 +23,17 @@
     %section.l-single-container
       %h2.registration.l-single-head
         会員登録完了
-
+      .l-single-inner
+        .l-single-content
+          .form-group
+            %h3.done-font ありがとうございます。
+            %h3.done-font 会員登録が完了しました。
+          .form-group
+            =link_to root_path do
+              .btn-default.btn-mail
+                %h3.done-font メルカリをはじめる
+    .footerimg
+      = image_tag('done_footer.png', class:'done_footer')
   %footer.single-footer
     %nav.footernav
       %ul
