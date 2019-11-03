@@ -19,12 +19,12 @@
     line-height: 1.2;
     text-overflow: ellipsis;
     white-space: nowrap;
-    .bread-crumbs li:last-child {
+      }
+      .bread-crumbs li:last-child {
         font-weight: 600;
       }
-    i.fa-angle-right {
-      margin: 0 8px;
-      font-size: 9px;
-      color: #888;
-      }
+  i.fa-angle-right {
+    margin: 0 8px;
+    font-size: 9px;
+    color: #888;
     }
