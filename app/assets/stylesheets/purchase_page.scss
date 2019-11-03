@@ -80,3 +80,33 @@ font-size: 14px;
   text-align: center;
 }
 }
+.purchase_address{
+  padding: 24px 12.5% 0;
+  border-top: 1px solid #f5f5f5;
+  margin: 40px 0 0;
+  &__content{
+    max-width: 343px;
+    margin: 0 auto;
+    &__top{
+      font-size: 14px;
+      margin: 0;
+      font-weight: 600;
+    }
+    &__bottom{
+      margin: 8px 0;
+      font-size: 14px;
+      line-height: 1.4;
+      display: inline-block;
+    }
+    &__btn{
+      color: $blue;
+      display: block;
+      text-align: right;
+    }
+  }
+}
+.purchase_pay{
+  padding: 24px 12.5% 0;
+  border-top: 1px solid #f5f5f5;
+  margin: 40px 0 0;
+}
