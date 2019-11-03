@@ -13,6 +13,9 @@ class UsersController < ApplicationController
   def method_of_payment
   end
 
+  def notification
+  end
+
   def set_user
     @user = User.find(1)
   end

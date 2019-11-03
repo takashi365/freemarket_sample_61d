@@ -7,30 +7,19 @@
       = fa_icon "angle-right"
     %li
       %span マイページ
+      = fa_icon "angle-right"
+    %li
+      %span お知らせ
 %main.mypage-container.clearfix
   .mypage-content
-    %section.mypage-user-icon
-      %a
-        %figure 
-          = image_tag 'user_icon.png', height: "60", width: "60"
-        %h2.bold suzuki
-        .mypage-number
-          %div
-            評価
-            %span.bold 0
-          %div
-            出品数
-            %span.bold 0
     %section.mypage-tab-container-notification-todo
       %ul.mypage-tabs
         %li.active
           %h3
-            %a
-              お知らせ
+            %a お知らせ
         %li
           %h3
-            %a
-              やることリスト
+            %a やることリスト
       .tab-content
         %ul#mypage-tab-notification.mypage-item-list.tab-pane.active
           %li
@@ -43,17 +32,6 @@
                   %time
                     = fa_icon 'clock-o'
                     %span 10 分前
-              = fa_icon 'angle-right'
-          %li
-            %a.mypage-item-link
-              %figure
-                = image_tag 'mercari_profile.png', class: 'lazyloaded'
-              .mypage-item-body
-                .mypage-item-text 
-                  事務局から個別メッセージ「ログイン通知」
-                  %time
-                    = fa_icon 'clock-o'
-                    %span 10 分前
                 = fa_icon "angle-right"
           %li
             %a.mypage-item-link
@@ -88,22 +66,17 @@
                     = fa_icon 'clock-o'
                     %span 10 分前
                 = fa_icon "angle-right"
-          %li.mypage-go-list
-            %a 一覧を見る
-    %section.mypage-tab-container
-    %h2.mypage-tab-head 購入した商品
-    %ul.mypage-tabs
-      %li.active
-        %h3
-          %a
-            取引中
-      %li
-        %h3
-          %a
-            過去の取引
-    .tab-content
-      %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
-        %li.mypage-item-not-found.bold 取引中の商品がありません
+          %li
+            %a.mypage-item-link
+              %figure
+                = image_tag 'mercari_profile.png', class: 'lazyloaded'
+              .mypage-item-body
+                .mypage-item-text 
+                  事務局から個別メッセージ「ログイン通知」
+                  %time
+                    = fa_icon 'clock-o'
+                    %span 10 分前
+                = fa_icon "angle-right"
 
   = render 'mypage-side'
 = render 'items/footer'

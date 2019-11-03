@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :items
   resources :users do
     get 'method_of_payment'
+    get 'notification'
   end
   resources :signup do
     collection do
