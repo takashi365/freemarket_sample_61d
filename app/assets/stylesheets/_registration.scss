@@ -157,6 +157,7 @@ button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local
   width: calc(50% - 6px);
   display: inline-block;
 }
+
 .form-group:first-child{
   margin:0
 }
@@ -348,4 +349,23 @@ select {
   }
   .posi-re{
     position: relative;
+  }
+  .credit{
+    width: 47px;
+    height: 30px;
+  }
+  .credit-box{
+    margin: 5px;
+    justify-content: space-between;
+  }
+  .pulldown-crd{
+    position: absolute;
+    right: -25px;
+    top: 35px;
+    font-size: 40px;
+    color: darkgray;
+  }
+  .form-help{
+    margin-top: 5px;
+    margin-right: -30px;
   }
