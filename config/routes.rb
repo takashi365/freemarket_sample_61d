@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "items#index"
-  resources :items
+  resources :items do
+    get 'purchase_page'
+  end
   resources :users do
     get 'method_of_payment'
   end
