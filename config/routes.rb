@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :items do
     get 'purchase_page'
     get 'purchase_pay'
+    get 'exhibit_page'
   end
   resources :users do
     get 'method_of_payment'
