@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get 'purchase_page'
     get 'purchase_pay'
     get 'exhibit_page'
+    get 'exhibit_ok'
   end
   resources :users do
     get 'method_of_payment'

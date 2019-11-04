@@ -72,6 +72,9 @@
     width: 100%;
     line-height: 48px;
     font-size: 14px;
+    a{
+      color: $white;
+    }
   }
   &__back{
     width: 45%;

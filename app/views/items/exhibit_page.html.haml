@@ -127,7 +127,8 @@
               %a加盟店規約
               に同意したことになります。
           .exhibit_box__btn
-            出品する
+            =link_to item_exhibit_ok_path do
+              出品する
           .exhibit_box__back
             =link_to root_path do
               もどる
