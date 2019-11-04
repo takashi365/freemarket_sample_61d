@@ -72,6 +72,7 @@
               = link_to("/", target: "_blank") do
                 = fa_icon 'question-circle'
                 カード裏面の番号とは？
-            %button.btn-default.btn-red{type: "submit"} 追加する
+            %button.btn-default.btn-red{type: "submit"}
+              = link_to '追加する',user_my_card_path(@user.id)
   = render 'mypage-side'
 = render 'items/footer'

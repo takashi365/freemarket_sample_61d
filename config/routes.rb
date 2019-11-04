@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get 'notification'
     get 'todo'
     get 'create_card'
+    get 'my_card'
   end
   resources :signup do
     collection do
