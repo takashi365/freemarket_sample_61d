@@ -21,9 +21,10 @@
           %ul.settings-payment-list
         %section.settings-add-card
           .l-single-content
-            %a.btn-default.btn-red.submit_button
+            .btn-default.btn-red.submit_button
               = fa_icon "credit-card"
-              クレジットカードを追加する
+              = link_to 'クレジットカードを追加する',user_create_card_path(@user.id)
+
         .settings-not-regist
           %a
             %span 支払い方法について

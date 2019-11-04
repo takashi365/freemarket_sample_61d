@@ -19,6 +19,9 @@ class UsersController < ApplicationController
   def todo
   end
 
+  def create_card
+  end
+
   def set_user
     @user = User.find(1)
   end

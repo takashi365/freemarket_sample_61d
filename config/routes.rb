@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get 'method_of_payment'
     get 'notification'
     get 'todo'
+    get 'create_card'
   end
   resources :signup do
     collection do
