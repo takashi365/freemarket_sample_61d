@@ -1,0 +1,28 @@
+.sign-container
+  %header.sign-header
+    %h1#startlogo
+      = link_to image_tag('mercari.png', class:'mercari'), root_path, class: "head-a"
+  %main.single-main
+    %section.l-single-container
+      %h2.registration
+        出品が完了しました 🎉
+      .l-single-inner
+        .l-single-content
+          .l-single-content_topbtn
+            =link_to users_path do
+              マイページに戻る
+          .l-single-content_topbtn
+            =link_to root_path do
+              トップページに戻る
+  %footer.single-footer
+    %nav.footernav
+      %ul.clearfix
+        %li
+          プライバシーポリシー
+        %li
+          メルカリ利用規約
+        %li
+          特定商取引に関する表記
+    = link_to image_tag('logo-gray.svg', class:'greymercari'), root_path, class: "footerlogo"
+    %p
+      © 2019 Mercari
