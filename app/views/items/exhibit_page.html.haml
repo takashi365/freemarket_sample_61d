@@ -30,9 +30,88 @@
             %label.fontweigth{for: "nickname"} 商品の説明
             %span.form-require 必須
             %input.input-default.width.height{name: "nickname", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", type: "text", value: ""}/
-        .exhibit_box
-        .exhibit_box
-        .exhibit_box
+        .exhibit_box.flex
+          .exhibit_box__grey.flex
+            商品の詳細
+            =fa_icon 'question-circle',class:'question-circle'
+          .exhibit_box__lists
+            .exhibit_box__list
+              .exhibit_box__list__top
+                .form-group
+                %label.fontweigth{for: "nickname"} カテゴリー
+                %span.form-require 必須
+              .exhibit_box__list__bottom
+                %select.select-exhibit{name: "prefectures"}
+                .exhibit_box__list__bottom__icon
+                  =fa_icon 'chevron-down'
+            .exhibit_box__list
+              .exhibit_box__list__top
+                .form-group
+                %label.fontweigth{for: "nickname"} 商品の状態
+                %span.form-require 必須
+              .exhibit_box__list__bottom.clearfix
+                %select.select-exhibit{name: "prefectures"}
+                .exhibit_box__list__bottom__icon2
+                  =fa_icon 'chevron-down'
+        .exhibit_box.flex
+          .exhibit_box__grey
+            配送について 
+            =fa_icon 'question-circle',class:'question-circle'
+          .exhibit_box__lists
+            .exhibit_box__list
+              .exhibit_box__list__top
+                .form-group
+                %label.fontweigth{for: "nickname"} 配送料の負担
+                %span.form-require 必須
+              .exhibit_box__list__bottom
+                %select.select-exhibit{name: "prefectures"}
+                .exhibit_box__list__bottom__icon
+                  =fa_icon 'chevron-down'
+            .exhibit_box__list
+              .exhibit_box__list__top
+                .form-group
+                %label.fontweigth{for: "nickname"} 発送元の地域
+                %span.form-require 必須
+              .exhibit_box__list__bottom.clearfix
+                %select.select-exhibit{name: "prefectures"}
+                .exhibit_box__list__bottom__icon2
+                  =fa_icon 'chevron-down'
+                .exhibit_box__list
+              .exhibit_box__list__top
+                .form-group
+                %label.fontweigth{for: "nickname"} 発送日までの日数
+                %span.form-require 必須
+              .exhibit_box__list__bottom.clearfix
+                %select.select-exhibit{name: "prefectures"}
+                .exhibit_box__list__bottom__icon3
+                  =fa_icon 'chevron-down'
+        .exhibit_box.flex
+          .exhibit_box__grey
+            販売価格(300〜9,999,999)
+            =fa_icon 'question-circle',class:'question-circle'
+          .exhibit_box__list
+            .exhibit_box__list__prices
+              .exhibit_box__list__prices__price.flex
+                .exhibit_box__list__prices__price__left
+                  .form-group
+                  %label.fontweigth{for: "nickname"} 価格
+                  %span.form-require 必須
+                .exhibit_box__list__prices__price__right.flex
+                  .exhibit_box__list__prices__price__right__text
+                    ¥
+                  %input.input-price{name: "nickname", placeholder: "例）300", type: "text", value: ""}/
+            .exhibit_box__list__fees
+              .exhibit_box__list__fees__fee.flex
+                .exhibit_box__list__rees__fee__left
+                  販売手数料（10％）
+                .exhibit_box__list__fees__fee__right
+                  ー
+            .exhibit_box__list__profits
+              .exhibit_box__list__profits__profit.flex
+                .exhibit_box__list__profits__profit__left
+                  販売利益
+                .exhibit_box__list__profits__profit__right
+                  ー
         .exhibit_box
           .exhibit_box__text
             %p
@@ -52,7 +131,6 @@
           .exhibit_box__back
             =link_to root_path do
               もどる
-      
   %footer.single-footer
     %nav.footernav
       %ul.clearfix

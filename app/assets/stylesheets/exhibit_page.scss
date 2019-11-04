@@ -46,6 +46,8 @@
 }
 }
 .exhibit_box{
+  position: relative;
+  clear: both;
   padding: 40px;
   border-top: 1px solid #eee;
 
@@ -85,12 +87,75 @@
       color: $white;
     }
   }
+  &__grey{
+    color: #888;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &__list{
+    width: 400px;
+    margin-left: auto;
+
+    &__top{
+      margin: 20px 0 0;
+    }
+    &__bottom{
+      margin: 8px 0 0;
+      &__icon{
+      position: absolute;
+      right: 60px;
+      top: 100px;
+      }
+      &__icon2{
+      position: absolute;
+      right: 60px;
+      top: 190px;
+      }
+      &__icon3{
+        position: absolute;
+        right: 60px;
+        top: 280px;
+      }
+    }
+  &__fees{
+    padding: 24px 0;
+    border-top: 1px solid #ccc;
+    &__fee__right{
+      margin-left: auto;
+    }
+  }
+  &__prices{
+    padding: 0 0 24px;
+    border: 0;
+    &__price{
+      &__right{
+        margin-left: auto;
+        &__text{
+          margin-top: auto;
+        }
+      }
+    }
+  }
+  
+  &__profits{
+    padding: 24px 0;
+    border-top: 1px solid #ccc;
+    &__profit__left{
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &__profit__right{
+      margin-left: auto;
+    }
+  }
+  }
 }
 .fontweigth{
   font-weight: 600;
 }
 .width{
    width:-webkit-fill-available;
+   word-wrap: break-word;
 }
 .height{
   display: block;
@@ -99,4 +164,34 @@
   padding: 10px;
   font-size: 16px;
   line-height: 1.5;
+}
+.select-exhibit{
+  background: $white;
+  height: 48px;
+  width: 400px;
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.exhibit_box__lists{
+  margin-left:auto;
+}
+.input-price{
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+  display: inline-block;
+  width: 80%;
+  margin: 0 0 0 5%;
+  line-height: 16px;
 }
