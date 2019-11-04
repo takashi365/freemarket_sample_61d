@@ -15,7 +15,6 @@
           .l-single-content {
               max-width: 320px;
               margin: 0 auto;
-
               .btn-red {
                   margin: 40px 0 0;
                   background: #ea352d;
@@ -35,6 +34,9 @@
                   transition: all ease-out .3s;
                   cursor: pointer;
                   text-align: center;
+                  a {
+                    color: #fff;
+                  }
                 }
            }
        }

@@ -1,0 +1,77 @@
+= render 'items/header'
+= render 'items/exhibit'
+%nav.bread-crumbs
+  %ul
+    %li
+      %span メルカリ
+      = fa_icon "angle-right"
+    %li
+      %span マイページ
+      = fa_icon "angle-right"
+    %li
+      %span 支払い方法
+      = fa_icon "angle-right"
+    %li
+      %span クレジットカード情報入力
+%main.mypage-container.clearfix
+  .l-content
+    %section.l-chapter-container
+      %h2.l-chapter-head クレジットカード情報入力
+      %form.l-single-inner.registration-form{action: "./entry_done", method: "GET", novalidate: "novalidate"}
+        %input{name: "__csrf_value", type: "hidden", value: ""}/
+        .l-single-content
+          .form-group
+            %label{for: "post_number"} カード番号
+            %span.form-require 必須
+            %input.input-default{name: "post_number", placeholder: "半角英数のみ", type: "text", value: ""}
+          .credit-box.flex-box
+            = image_tag('logo_visa.gif', class: 'credit')
+            = image_tag('logo_mastercard.gif', class:'credit')
+            = image_tag('jcb-logomark-img-02.gif', class:'credit')
+            = image_tag('amex-logomark-img-05.gif', class:'credit')
+            = image_tag('diners-logomark-img-02.gif', class:'credit')
+            = image_tag('discover-logomark-img-07.gif', class:'credit')
+          .form-group.posi-re
+            %label{for: "post_number"} 有効期限
+            %span.form-require 必須
+            .select-wrap.half
+              %select#payment_card_expire_mm.select-default
+                %option{:value => "01"} 01
+                %option{:value => "02"} 02
+                %option{:value => "03"} 03
+                %option{:value => "04"} 04
+                %option{:value => "05"} 05
+                %option{:value => "06"} 06
+                %option{:value => "07"} 07
+                %option{:value => "08"} 08
+                %option{:value => "09"} 09
+                %option{:value => "10"} 10
+                %option{:value => "11"} 11
+                %option{:value => "12"} 12
+              = fa_icon 'chevron-down',class: 'down-icon'
+              %span.moon 月
+              %select#payment_card_expire_yy.select-default
+                %option{:value => "19"} 19
+                %option{:value => "20"} 20
+                %option{:value => "21"} 21
+                %option{:value => "22"} 22
+                %option{:value => "23"} 23
+                %option{:value => "24"} 24
+                %option{:value => "25"} 25
+                %option{:value => "26"} 26
+                %option{:value => "27"} 27
+                %option{:value => "28"} 28
+                %option{:value => "29"} 29
+              = fa_icon 'chevron-down',class: 'down-icon'
+              %span 年
+            .form-group
+              %label{for: "post_number"} セキュリティコード
+              %span.form-require 必須
+              %input.input-default{name: "post_number", placeholder: "カード背面４桁もしくは３桁の番号", type: "text", value: ""}
+            .form-help.text-right
+              = link_to("/", target: "_blank") do
+                = fa_icon 'question-circle'
+                カード裏面の番号とは？
+            %button.btn-default.btn-red{type: "submit"} 追加する
+  = render 'mypage-side'
+= render 'items/footer'
