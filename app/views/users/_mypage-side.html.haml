@@ -2,8 +2,8 @@
   %nav.mypage-nav
     %ul.mypage-nav-list
       %li
-        %a.mypage-nav-list-item
-          マイページ
+        .mypage-nav-list-item
+          = link_to 'マイページ',users_path(@user)
           = fa_icon "angle-right"
       %li
         .mypage-nav-list-item

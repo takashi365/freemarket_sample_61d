@@ -123,7 +123,11 @@
     text-align: center;
     font-size: 16px;
     color: #ccc;
+    background-color: white;
 }
+  .mypage-go-list {
+    padding: 16px;
+  }
   .mypage-go-list a {
     display: block;
     height: 56px;
@@ -132,7 +136,20 @@
     color: #333;
     line-height: 56px;
     text-align: center;
+    font-weight: normal;
   }
+  .mypage-tab-container {
+    margin: 40px 0 0;
+    background: #fff;
+  }
+  .mypage-tab-head {
+    padding: 0 16px;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 72px;
+    font-weight: bold;
+}
+
   .mypage-item-link {
     display: block;
     min-height: 48px;
