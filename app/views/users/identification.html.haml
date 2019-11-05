@@ -21,9 +21,8 @@
             %br>/
             登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
           %p.text-right
-            %a{href: "", target:  "_blank"}
-              本人確認書類のアップロードについて
-              = fa_icon 'angle-right'
+            = link_to "本人確認書類のアップロードについて"
+            = fa_icon 'angle-right'
         .form-group
           %label お名前
           %p 鈴木 儀
@@ -59,9 +58,8 @@
         %button.btn-default.btn-red{type: "submit"} 登録する
         .form-group.text-right
           %p
-            %a{href: "", target: "_blank"}
-              本人情報の登録について
-              = fa_icon 'angle-right'
+            = link_to '本人情報の登録について'
+            = fa_icon 'angle-right'
   .l-side
   = render 'mypage-side'
 = render 'items/footer'
