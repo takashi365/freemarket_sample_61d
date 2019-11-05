@@ -25,6 +25,9 @@ class UsersController < ApplicationController
   def my_card
   end
 
+  def identification
+  end
+
   def set_user
     @user = User.find(1)
   end

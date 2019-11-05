@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get 'todo'
     get 'create_card'
     get 'my_card'
+    get 'identification'
   end
   resources :signup do
     collection do
