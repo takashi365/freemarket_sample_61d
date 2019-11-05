@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
-
+  before_action  except: :index
   def index
-    @item = Item.new
+    @item = Item.all
   end
   
   def new
@@ -10,6 +10,10 @@ class ItemsController < ApplicationController
 
   def create
     Item.create(item_params)
+    redirect_to root_path 
+  end
+
+  def exhibit_ok
   end
 
   def show

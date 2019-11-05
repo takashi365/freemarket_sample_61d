@@ -1,0 +1,10 @@
+.item_list_box_item
+  =link_to "items/show" do
+    .item_list_box_item__image
+      .image_price
+        .image_price__enn
+          ¥
+        .image_price__num
+          = item.price.to_i
+    .item_list_box_item__text
+      = item.description

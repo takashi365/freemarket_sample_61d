@@ -127,9 +127,7 @@
               また、出品をもちまして
               %a加盟店規約
               に同意したことになります。
-          .exhibit_box__btn
-            =link_to "./items/exhibit_ok" do
-              出品する
+          = f.submit '出品する', class: 'exhibit_box__btn'
           .exhibit_box__back
             =link_to root_path do
               もどる
