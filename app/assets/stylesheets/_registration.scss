@@ -166,8 +166,8 @@ label{
 }
 .form-group{
   margin: 40px 0 0;
-  &__low{
-    margin: 10px;
+  &__low{	
+    margin: 10px;	
   }
   a{
     color: $blue;
@@ -242,12 +242,12 @@ label{
 
 .text-right{
   text-align: right;
+  a {
+    color: #0099e8;
+  }
 }
-.text-left{
+.text-left {
   text-align: left;
-}
-.text-center{
-  text-align: center;
 }
 .single-footer{
   width: 456px;
@@ -303,9 +303,9 @@ select{
   cursor: pointer;
   text-align: center;
   box-sizing: inherit;
-  &__low{
-    width: 296px;
-    margin: 24px auto;
+  &__low{	
+    width: 296px;	
+    margin: 24px auto;	
   }
 }
 .btn-mail{
@@ -393,36 +393,36 @@ select {
   }
   .footerimg{
     text-align: center;
-  }
-.login-no-account{
-  text-align: center;
-  padding: 40px 64px;
-  &__btn{
-    display: block;
-    margin: 8px 0 0;
-    border: 1px solid $blue;
-    background: $blue;
-    color: $white;
-    line-height: 40px;
-  }
-}
-.login-panel{
-  width: 456px;
-  margin: 0 auto;
-  background: $white;
-}
-.login-margin{
-  margin-left: 80px;
-  margin-right: 80px;
-}
-.size-add{
-  margin: 0;
-  width: 300px;
-  height: 26px;
-}
-.login-a{
-  display: block;
-}
-.padding-left{
-  padding: 10px 80px 30px;
-}
+  }	
+.login-no-account{	
+  text-align: center;	
+  padding: 40px 64px;	
+  &__btn{	
+    display: block;	
+    margin: 8px 0 0;	
+    border: 1px solid $blue;	
+    background: $blue;	
+    color: $white;	
+    line-height: 40px;	
+  }	
+}	
+.login-panel{	
+  width: 456px;	
+  margin: 0 auto;	
+  background: $white;	
+}	
+.login-margin{	
+  margin-left: 80px;	
+  margin-right: 80px;	
+}	
+.size-add{	
+  margin: 0;	
+  width: 300px;	
+  height: 26px;	
+}	
+.login-a{	
+  display: block;	
+}	
+.padding-left{	
+  padding: 10px 80px 30px;	
+} 

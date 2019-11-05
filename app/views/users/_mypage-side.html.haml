@@ -86,8 +86,8 @@
           メール/パスワード
           = fa_icon "angle-right"
       %li
-        %a.mypage-nav-list-item
-          本人情報
+        .mypage-nav-list-item
+          = link_to '本人情報', user_identification_path(@user.id)
           = fa_icon "angle-right"
       %li
         %a.mypage-nav-list-item

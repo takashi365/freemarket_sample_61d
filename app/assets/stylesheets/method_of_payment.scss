@@ -12,13 +12,23 @@
     }
 }
 .down-icon {
-    font-size: 10px;
-    margin: 0 6px 0 -15px;
-    position: relative;
-    right: 16px;
-    pointer-events: none;
-    color: #888;
-    top: 5px;
+  font-size: 10px;
+  margin: 0 6px 0 -15px;
+  position: relative;
+  right: 16px;
+  pointer-events: none;
+  color: #888;
+  top: 5px;
+}
+.down-icon2 {
+  font-size: 10px;
+  margin: 0 6px 0 -15px;
+  position: relative;
+  right: 16px;
+  pointer-events: none;
+  color: #888;
+  top: 50px;
+  float: right;
 }
 .settings-payment-list li {
   padding: 24px 0;

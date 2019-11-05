@@ -51,5 +51,29 @@
     border: 0;
     outline: 0;
     -webkit-appearance: none;
+  }
 }
+
+.form-arbitrary {
+  background: #ccc;
+}
+.form-require, .form-arbitrary, .message-is-seller, .news-private {
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.select-prefectures2 {
+  width: 605px;
+  height: 68px;
+  margin: 8px 0 0;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: white;
+  line-height: 1.5;
+  font-size: 16px;
 }
