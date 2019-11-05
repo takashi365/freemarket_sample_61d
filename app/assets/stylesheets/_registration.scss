@@ -209,6 +209,13 @@ label{
 .birthday-select-wrap{
   width: 76px;
 }
+.select-wrap{
+  position: relative;
+  .pulldown{
+    top: 8px;
+    right: 0;
+  }
+}
 .select-default {
   position: relative;
   z-index: 2;

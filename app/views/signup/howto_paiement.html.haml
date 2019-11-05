@@ -23,13 +23,12 @@
     %section.l-single-container
       %h2.registration.l-single-head
         支払い方法
-      %form.l-single-inner.registration-form{action: "./entry_done", method: "GET", novalidate: "novalidate"}
-        %input{name: "__csrf_value", type: "hidden", value: ""}/
+      = form_with model: @user, class: "l-single-inner registration-form", local: true do |f|
         .l-single-content
           .form-group
-            %label{for: "post_number"} カード番号
+            =f.label :card_number, 'カード番号'
             %span.form-require 必須
-            %input.input-default{name: "post_number", placeholder: "半角英数のみ", type: "text", value: ""}
+            =f.text_field :card_number, class: "input-default", placeholder: "半角英数のみ"
           .credit-box.flex-box
             = image_tag('logo_visa.gif', class: 'credit')
             = image_tag('logo_mastercard.gif', class:'credit')
@@ -38,23 +37,21 @@
             = image_tag('diners-logomark-img-02.gif', class:'credit')
             = image_tag('discover-logomark-img-07.gif', class:'credit')
           .form-group.posi-re
-            %label{for: "post_number"} 有効期限
+            =f.label :expiration_date, '有効期限'
             %span.form-require 必須
-            = fa_icon 'chevron-down', class: "pulldown-crd"
-            %select.select-prefectures.half{name: "prefectures"}
-              %option{value: ""} ー
-            = fa_icon 'chevron-down', class: "pulldown"
-            %select.select-prefectures.half{name: "prefectures"}
-              %option{value: ""} ー
+            = fa_icon 'chevron-down', class: "pulldown-crd half"
+            =f.select :expiration_date, [["-", ""]], { include_blank: true, selected: 1}, {class: "select-prefectures half"}
+            = fa_icon 'chevron-down', class: "pulldown half"
+            =f.select :expiration_date, [["-", ""]], { include_blank: true, selected: 1}, {class: "select-prefectures half"}
           .form-group
-            %label{for: "post_number"} セキュリティコード
+            =f.label :sec_cord, 'セキュリティコード'
             %span.form-require 必須
-            %input.input-default{name: "post_number", placeholder: "カード背面４桁もしくは３桁の番号", type: "text", value: ""}
+            =f.text_field :sec_cord, class: "input-default", placeholder: "カード背面４桁もしくは３桁の番号"
           .form-help.text-right
             = link_to("/", target: "_blank") do
               = fa_icon 'question-circle'
               本人情報の登録について
-          %button.btn-default.btn-red{type: "submit"} 次へ進む
+          =f.submit "次へ進む", class: "btn-default btn-red"
 
   %footer.single-footer
     %nav.footernav
