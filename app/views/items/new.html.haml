@@ -19,17 +19,22 @@
             .exhibit_main_pagging__date__image
             .exhibit_main_pagging__date__content
               %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
+      = form_with(model: @item, local: true) do |f|
         .exhibit_box
           .exhibit_box__name
             .form-group
             %label.fontweigth{for: "nickname"} 商品名
             %span.form-require 必須
-            %input.input-default.width{name: "nickname", placeholder: "商品名(必須４０文字まで)", type: "text", value: ""}/
+            = f.text_field :name, class:'f_input', placeholder: '品名(必須４０文字まで)'
+          - if @item.errors.any?
+            =render 'layouts/error_messages', model: f.object 
           .exhibit_box__explanation
             .form-group
             %label.fontweigth{for: "nickname"} 商品の説明
             %span.form-require 必須
-            %input.input-default.width.height{name: "nickname", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", type: "text", value: ""}/
+            = f.text_area :description,class:'f_textarea', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。'
+          - if @item.errors.any?
+            =render 'layouts/error_messages', model: f.object 
         .exhibit_box.flex
           .exhibit_box__grey.flex
             商品の詳細
@@ -99,7 +104,9 @@
                 .exhibit_box__list__prices__price__right.flex
                   .exhibit_box__list__prices__price__right__text
                     ¥
-                  %input.input-price{name: "nickname", placeholder: "例）300", type: "text", value: ""}/
+                  = f.text_field :price,class:'f_input', placeholder: '例）300'
+            - if @item.errors.any?
+              =render 'layouts/error_price', model: f.object 
             .exhibit_box__list__fees
               .exhibit_box__list__fees__fee.flex
                 .exhibit_box__list__rees__fee__left
@@ -126,9 +133,7 @@
               また、出品をもちまして
               %a加盟店規約
               に同意したことになります。
-          .exhibit_box__btn
-            =link_to item_exhibit_ok_path do
-              出品する
+          = f.submit '出品する', class: 'exhibit_box__btn'
           .exhibit_box__back
             =link_to root_path do
               もどる

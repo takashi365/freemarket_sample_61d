@@ -1,7 +1,7 @@
 = render 'header'
 .iteme_page_main.clearfix
   .iteme_page_main__name
-    商品詳細
+    =@item.name
   .iteme_page_main__view.clearfix
     .iteme_page_main__view_left
       .iteme_page_main__view_left_image
@@ -74,22 +74,17 @@
           １〜２日で発送
   .iteme_page_main__price
     .iteme_page_main__price__yen
-      ¥3,000
+      ¥
+      = @item.price
     .iteme_page_main__price__tex
       （税込）
     .iteme_page_main__price__postage
       送料込み
   .buy_btn
-    =link_to "items/purchase_page",class: 'buy_btn' do
+    =link_to item_purchase_page_path(@item),class: 'buy_btn' do
       購入画面に進む
   .item_buyer_comment
-    こちらの表品は、
-    新品の商品です。
-    サイズ:幅5.5×奥行5×高さ21cm
-    電源:AC100-240V
-    消費電力:22-25W
-    温度調節機能:1段階(180℃)
-    商品重量:約215g
+    =@item.description
   .item_btn_list.clearfix
     .item_btn_list__left
       .item_btn_list__left__like
