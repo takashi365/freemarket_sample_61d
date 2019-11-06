@@ -81,7 +81,7 @@
     .iteme_page_main__price__postage
       送料込み
   .buy_btn
-    =link_to item_purchase_page_path(@item.id),class: 'buy_btn' do
+    =link_to item_purchase_page_path(@item),class: 'buy_btn' do
       購入画面に進む
   .item_buyer_comment
     =@item.description

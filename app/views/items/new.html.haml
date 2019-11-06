@@ -19,7 +19,7 @@
             .exhibit_main_pagging__date__image
             .exhibit_main_pagging__date__content
               %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
-      = form_with(model: Item.new, local: true) do |f|
+      = form_with(model: @item, local: true) do |f|
         .exhibit_box
           .exhibit_box__name
             .form-group
