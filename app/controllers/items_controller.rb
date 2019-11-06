@@ -9,8 +9,13 @@ class ItemsController < ApplicationController
   end
 
   def create
-    Item.create(item_params)
-    redirect_to  item_exhibit_ok_path (:item_id)
+    @item = Item.new(item_params)
+    if @item.save
+    redirect_to item_exhibit_ok_path (:item_id)
+    else
+      render action: :new
+    end
+
   end
 
   def exhibit_ok

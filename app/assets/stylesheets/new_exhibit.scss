@@ -217,3 +217,11 @@
   font-size: 16px;
   line-height: 1.5;
 }
+.item_error_message{
+  color: $red;
+  margin: 8px 0 0;
+  &__price{
+    color: $red;
+  margin: 8px 0 0;
+  }
+}
