@@ -164,6 +164,7 @@ button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local
 label{
   display: inline-block;
 }
+
 .form-group{
   margin: 40px 0 0;
   &__low{
@@ -176,6 +177,9 @@ label{
   label{
     font-weight: 600;
   }
+}
+#adjust{
+  margin-bottom: 200px;
 }
 .form-require, .form-arbitrary, .message-is-seller, .news-private {
   margin: 0 0 0 8px;
@@ -298,6 +302,22 @@ label{
 select{
   width: 100px;
 }
+.crd-fontmonth{
+  width: 50px;
+  position: absolute;
+  left: 170px;
+  top: 20px;
+  font-size: 20px;
+  display: block;
+}
+.crd-fontyear{
+  width: 50px;
+  position: absolute;
+  left: 170px;
+  top: 85px;
+  font-size: 20px;
+  display: block;
+}
 
 .btn-default{
   border-radius: 4px;
@@ -343,7 +363,10 @@ select{
   font-size: 20px;
 }
 .select-prefectures{
-  width: 378px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: calc(50% - 6px);
   height: 68px;
   margin: 8px 0 0;
   padding: 10px 16px 8px;
@@ -352,6 +375,9 @@ select{
   background: white;
   line-height: 1.5;
   font-size: 16px;
+  &.second{
+    top: 80px;
+  }
 }
 select {
   -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
@@ -382,10 +408,19 @@ select {
   }
   .pulldown-crd{
     position: absolute;
-    right: -25px;
-    top: 35px;
+    left: 120px;
+    top: 30px;
     font-size: 40px;
     color: darkgray;
+    z-index: 2;
+  }
+  .pulldown-crd2{
+    position: absolute;
+    left: 120px;
+    top: 100px;
+    font-size: 40px;
+    color: darkgray;
+    z-index: 2;
   }
   .form-help{
     margin-top: 5px;

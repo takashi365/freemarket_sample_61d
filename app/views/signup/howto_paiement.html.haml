@@ -36,13 +36,17 @@
             = image_tag('amex-logomark-img-05.gif', class:'credit')
             = image_tag('diners-logomark-img-02.gif', class:'credit')
             = image_tag('discover-logomark-img-07.gif', class:'credit')
-          .form-group.posi-re
-            =f.label :expiration_date, '有効期限'
+          .form-group.posi-re#adjust
+            =f.label '有効期限'
             %span.form-require 必須
-            = fa_icon 'chevron-down', class: "pulldown-crd half"
-            =f.select :expiration_date, [["-", ""]], { include_blank: true, selected: 1}, {class: "select-prefectures half"}
-            = fa_icon 'chevron-down', class: "pulldown half"
-            =f.select :expiration_date, [["-", ""]], { include_blank: true, selected: 1}, {class: "select-prefectures half"}
+            = fa_icon 'chevron-down', class: "pulldown-crd"
+            =f.select :expiration_month, [['1', "1"], ['2', "2"]], { include_blank: true, selected: 0}, {class: "select-prefectures"}
+            %p.crd-fontmonth
+              月
+            = fa_icon 'chevron-down', class: "pulldown-crd2"
+            =f.select :expiration_month, [['19', "19"], ['20', "20"]], { include_blank: true, selected: 0}, {class: "select-prefectures second"}
+            %p.crd-fontyear
+              年
           .form-group
             =f.label :sec_cord, 'セキュリティコード'
             %span.form-require 必須
