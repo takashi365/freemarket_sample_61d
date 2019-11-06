@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
-before_action :set_item,  only:[:show]
+before_action :set_item, only:[:show]
+before_action :set_purchase,  only:[:purchase_page]
+
   def index
     @item = Item.order("created_at DESC").page(params[:item]).per(10)
   end
@@ -25,7 +27,6 @@ before_action :set_item,  only:[:show]
   end 
 
   def purchase_page
-    @item = Item.find(params[:item_id])
   end
 
   private
@@ -36,6 +37,11 @@ before_action :set_item,  only:[:show]
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def set_purchase
+    @item = Item.find(params[:item_id])
+    
   end
 
 end
