@@ -13,7 +13,7 @@ before_action :set_purchase,  only:[:purchase_page]
   def create
     @item = Item.new(item_params)
     if @item.save
-    redirect_to item_exhibit_ok_path (:item_id)
+    redirect_to item_exhibit_ok_path (@item)
     else
       render action: :new
     end
@@ -41,7 +41,6 @@ before_action :set_purchase,  only:[:purchase_page]
 
   def set_purchase
     @item = Item.find(params[:item_id])
-    
   end
 
 end
