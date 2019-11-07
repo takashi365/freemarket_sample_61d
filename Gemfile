@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'pry-rails'
   gem 'dotenv-rails'
+  gem 'squasher', '>= 0.6.0'
 end
 
 group :development do
