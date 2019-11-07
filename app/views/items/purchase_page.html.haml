@@ -10,11 +10,12 @@
         .l-single-content
           .purchase_image
           .purchase_title
-            タイトスカート
+            =@item.name
           .purchase_content
             .purchase_content__price
               .purchase_content__price__left
-                ¥700
+                ¥
+                =@item.price
               .purchase_content__price__right
                 送料込み
             .purchase_content__point
@@ -24,7 +25,8 @@
               .purchase_content__prices__left
                 支払い金額
               .purchase_content__prices__right
-                ￥700
+                ￥
+                =@item.price
             .purchase_content__red.clearfix
               配送先と支払い方法の入力を完了して下さい。
             .purchase_content__btn
