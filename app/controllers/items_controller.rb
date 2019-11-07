@@ -13,9 +13,7 @@ before_action :set_purchase,  only:[:purchase_page]
 
   def create
     @item = Item.new(item_params)
-    # @image = Image.new(params[:image_url])
-    # @image.save
-    binding.pry
+  
     if @item.save!
     redirect_to item_exhibit_ok_path (@item)
     else
