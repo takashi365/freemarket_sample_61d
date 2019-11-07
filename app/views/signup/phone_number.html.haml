@@ -23,7 +23,7 @@
     %section.l-single-container
       %h2.registration.l-single-head
         電話番号の確認
-      = form_with model: @user, class: "l-single-inner registration-form", local: true do |f|
+      = form_with model: @user, url: sms_check_signup_index_path, method: :get, class: "l-single-inner registration-form", local: true do |f|
         .l-single-content
           .form-group
             =f.label :phone_number, '携帯電話の番号'
