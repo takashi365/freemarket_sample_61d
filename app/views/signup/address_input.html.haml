@@ -23,7 +23,7 @@
     %section.l-single-container
       %h2.registration.l-single-head
         住所入力
-      = form_with model: @user, class: "l-single-inner registration-form", local: true do |f|
+      = form_with model: @user, url: howto_paiement_signup_index_path, method: :get, class: "l-single-inner registration-form", local: true do |f|
         .l-single-content
           .form-group
             =f.label :family_name_kanji, 'お名前(全角)'
@@ -36,14 +36,14 @@
             =f.text_field :family_name_kana, class: "input-default", placeholder: "例) ヤマダ"
             =f.text_field :first_name_kana, class: "input-default", placeholder: "例) アヤ"
           .form-group
-            =f.label :post_number, '郵便番号'
+            =f.label :post_code, '郵便番号'
             %span.form-require 必須
-            =f.text_field :post_number, class: "input-default", placeholder: "例) 123-4567"
+            =f.text_field :post_code, class: "input-default", placeholder: "例) 123-4567"
           .form-group.posi-re
             =f.label :post_number, '都道府県'
             %span.form-require 必須
             = fa_icon 'chevron-down', class: "pulldown"
-            =f.select :prefectures, [['北海道', ""],['沖縄', ""]], { include_blank: true, selected: 1}, {class: "select-prefectures"}
+            =f.select :prefectures, [['北海道', ""],['沖縄', ""]], { include_blank: true, selected: 1}, {class: "prefectures-box"}
           .form-group
             =f.label :city, '市区町村'
             %span.form-require 必須
