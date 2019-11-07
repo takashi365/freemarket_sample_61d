@@ -7,7 +7,7 @@
       %h2.registration
         商品の情報を入力
       .exhibit_main
-      = form_with(model: @item, local: true) do |f|
+      = form_with(model: @item, local: true, multipart: true) do |f|
         .exhibit_main_pagging
           .exhibit_main_pagging__image.flex
             .exhibit_main_pagging__image__left
@@ -17,11 +17,12 @@
           .exhibit_main_pagging__up
             最大10枚までアップロードできます
           %label{for: "image"}
-            .exhibit_main_pagging__date
-              .exhibit_main_pagging__date__image
-              .exhibit_main_pagging__date__content
-                %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
-                = f.file_field :image_url, id: 'image' ,class: 'f_input_image', type:"file"
+            = f.fields_for :images do |fin|
+              .exhibit_main_pagging__date
+                .exhibit_main_pagging__date__image
+                .exhibit_main_pagging__date__content
+                  %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
+                  = fin.file_field :image_url, id: 'image' ,class: 'f_input_image', type:"file"
         .exhibit_box
           .exhibit_box__name
             .form-group

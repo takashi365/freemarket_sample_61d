@@ -8,11 +8,15 @@ before_action :set_purchase,  only:[:purchase_page]
   
   def new
     @item = Item.new
+    @item.images.build
   end
 
   def create
     @item = Item.new(item_params)
-    if @item.save
+    # @image = Image.new(params[:image_url])
+    # @image.save
+    binding.pry
+    if @item.save!
     redirect_to item_exhibit_ok_path (@item)
     else
       render action: :new
@@ -32,7 +36,7 @@ before_action :set_purchase,  only:[:purchase_page]
   private
 
   def item_params
-    params.require(:item).permit( :name, :description, :price, :status, :prefecture, :expense, :shipping_method, :arrival_date)
+    params.require(:item).permit( :name, :description, :price, :status, :prefecture, :expense, :shipping_method, :arrival_date, images_attributes:[:id, :image_url])
   end
 
   def set_item
