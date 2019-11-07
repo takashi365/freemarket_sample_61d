@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'pry-rails'
   gem 'dotenv-rails'
+  gem 'squasher', '>= 0.6.0'
 end
 
 group :development do
@@ -71,3 +72,5 @@ gem 'devise'
 gem "jquery-rails"
 gem 'recaptcha', require: "recaptcha/rails"
 gem 'active_hash'
+gem 'gretel'
+gem 'payjp'
