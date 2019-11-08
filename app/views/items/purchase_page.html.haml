@@ -9,6 +9,7 @@
       .l-single-inner
         .l-single-content
           .purchase_image
+            = image_tag @item.images[0].image_url.url,class:'purchase_image'
           .purchase_title
             =@item.name
           .purchase_content
