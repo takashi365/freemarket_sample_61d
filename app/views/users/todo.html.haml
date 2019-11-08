@@ -1,15 +1,7 @@
 = render 'items/header'
 = render 'items/exhibit'
-%nav.bread-crumbs
-  %ul
-    %li
-      %span メルカリ
-      = fa_icon "angle-right"
-    %li
-      %span マイページ
-      = fa_icon "angle-right"
-    %li
-      %span やることリスト
+- breadcrumb :todo
+= render 'breadcrumbs'
 %main.mypage-container.clearfix
   .mypage-content
     %section.mypage-tab-container-notification-todo
