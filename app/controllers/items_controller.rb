@@ -13,11 +13,12 @@ before_action :set_purchase,  only:[:purchase_page]
 
   def create
     @item = Item.new(item_params)
-  
-    if @item.save!
-    redirect_to item_exhibit_ok_path (@item)
+    if @item.save
+      redirect_to item_exhibit_ok_path (@item)
     else
+     
       render action: :new
+      
     end
 
   end
@@ -29,6 +30,9 @@ before_action :set_purchase,  only:[:purchase_page]
   end 
 
   def purchase_page
+  end
+
+  def images_up
   end
 
   private
