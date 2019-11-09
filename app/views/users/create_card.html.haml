@@ -1,18 +1,7 @@
 = render 'items/header'
 = render 'items/exhibit'
-%nav.bread-crumbs
-  %ul
-    %li
-      %span メルカリ
-      = fa_icon "angle-right"
-    %li
-      %span マイページ
-      = fa_icon "angle-right"
-    %li
-      %span 支払い方法
-      = fa_icon "angle-right"
-    %li
-      %span クレジットカード情報入力
+- breadcrumb :create_card
+= render 'breadcrumbs'
 %main.mypage-container.clearfix
   .l-content
     %section.l-chapter-container

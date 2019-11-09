@@ -1,12 +1,7 @@
 = render 'items/header'
 = render 'items/exhibit'
-%nav.bread-crumbs
-  %ul
-    %li
-      %span メルカリ
-      = fa_icon "angle-right"
-    %li
-      %span マイページ
+- breadcrumb :users
+= render 'breadcrumbs'
 %main.mypage-container.clearfix
   .mypage-content
     %section.mypage-user-icon
