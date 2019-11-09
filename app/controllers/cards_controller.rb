@@ -4,7 +4,7 @@ class CardsController < ApplicationController
 
  def create
     @user_id = session[:id]
-    Payjp.api_key = ENV['pay_secret_key']
+    Payjp.api_key = Rails.application.credentials.aws[:pay_secret_key]
     if params['payjpToken'].blank?
       # paramsの中にjsで作った'payjpTokenが存在するか確かめる
         redirect_to action: "index"
