@@ -28,7 +28,8 @@ class SignupController < ApplicationController
   end
 
   def address_input
-    @user = User.new # 新規インスタンス作成
+    @user = User.new
+    @user.build_address
   end
 
   def create
@@ -43,9 +44,9 @@ class SignupController < ApplicationController
       first_name_kana: session[:first_name_kana],
       year: session[:year],
       month: session[:month],
-      day: session[:day]
+      day: session[:day],
+      address_attributes: set_params[:address_attributes]
     )
-
     if @user.save
       session[:id] = @user.id
       flash[:notice] = 'ユーザー登録が完了しました'
@@ -72,7 +73,8 @@ class SignupController < ApplicationController
       :first_name_kana,
       :year,
       :month,
-      :day
+      :day,
+      address_attributes:[:id, :post_code, :prefectures, :city, :address, :after_address, :phone_number]
     )
   end
 end
