@@ -1,6 +1,7 @@
 class SignupController < ApplicationController
+  # before_action :create, only: [:howto_paiement]
+
   def entry_start
-    # @user = User.new # 新規インスタンス作成
   end
 
   def member_infomation
@@ -30,10 +31,6 @@ class SignupController < ApplicationController
     @user = User.new # 新規インスタンス作成
   end
 
-  def howto_paiement
-    @user = User.new # 新規インスタンス作成
-  end
-
   def create
     @user = User.new(
       nickname: session[:nickname],
@@ -51,14 +48,15 @@ class SignupController < ApplicationController
 
     if @user.save
       session[:id] = @user.id
-      redirect_to entry_done_signup_index_path
+      flash[:notice] = 'ユーザー登録が完了しました'
+      redirect_to cards_path
     else
       redirect_to entry_start_signup_index_path
     end
-
   end
 
   def entry_done
+    sign_in User.find(session[:id]) unless user_signed_in?
   end
 
   private
