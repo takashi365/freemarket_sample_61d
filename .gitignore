@@ -29,4 +29,5 @@
 
 
 # Ignore uploaded files in development
- /public/uploads/image/image_url
+public/uploads/*
+
