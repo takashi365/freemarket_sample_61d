@@ -1,6 +1,7 @@
 class SignupController < ApplicationController
+  # before_action :create, only: [:howto_paiement]
+
   def entry_start
-    # @user = User.new # 新規インスタンス作成
   end
 
   def member_infomation
@@ -27,11 +28,8 @@ class SignupController < ApplicationController
   end
 
   def address_input
-    @user = User.new # 新規インスタンス作成
-  end
-
-  def howto_paiement
-    @user = User.new # 新規インスタンス作成
+    @user = User.new
+    @user.build_address
   end
 
   def create
@@ -46,19 +44,20 @@ class SignupController < ApplicationController
       first_name_kana: session[:first_name_kana],
       year: session[:year],
       month: session[:month],
-      day: session[:day]
+      day: session[:day],
+      address_attributes: set_params[:address_attributes]
     )
-
     if @user.save
       session[:id] = @user.id
-      redirect_to entry_done_signup_index_path
+      flash[:notice] = 'ユーザー登録が完了しました'
+      redirect_to cards_path
     else
       redirect_to entry_start_signup_index_path
     end
-
   end
 
   def entry_done
+    sign_in User.find(session[:id]) unless user_signed_in?
   end
 
   private
@@ -74,7 +73,8 @@ class SignupController < ApplicationController
       :first_name_kana,
       :year,
       :month,
-      :day
+      :day,
+      address_attributes:[:id, :post_code, :prefectures, :city, :address, :after_address, :phone_number]
     )
   end
 end

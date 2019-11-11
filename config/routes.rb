@@ -22,8 +22,8 @@ Rails.application.routes.draw do
       get 'phone_number'
       get 'sms_check' 
       get 'address_input'
-      get 'howto_paiement'
       get 'entry_done' 
     end
   end
+  resources :cards
 end

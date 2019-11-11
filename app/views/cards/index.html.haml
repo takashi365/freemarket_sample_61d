@@ -23,12 +23,12 @@
     %section.l-single-container
       %h2.registration.l-single-head
         支払い方法
-      = form_with model: @user, url: signup_index_path, class: "l-single-inner registration-form", local: true do |f|
+      = form_with url: cards_path, id: "card__form", class: "l-single-inner registration-form", local: true do |f|
         .l-single-content
           .form-group
             =f.label :card_number, 'カード番号'
             %span.form-require 必須
-            =f.text_field :card_number, class: "input-default", placeholder: "半角英数のみ"
+            =f.text_field :card_number, id: "card_number", class: "input-default", placeholder: "半角英数のみ"
           .credit-box.flex-box
             = image_tag('logo_visa.gif', class: 'credit')
             = image_tag('logo_mastercard.gif', class:'credit')
@@ -40,22 +40,22 @@
             =f.label '有効期限'
             %span.form-require 必須
             = fa_icon 'chevron-down', class: "pulldown-crd"
-            =f.select :expiration_month, [['1', "1"], ['2', "2"]], { include_blank: true, selected: 0}, {class: "select-prefectures"}
+            =f.select :exp_month, [['12', '12'], ['2', "2"]], { include_blank: true, selected: 0}, {class: "select-prefectures", id: "card_month"}
             %p.crd-fontmonth
               月
             = fa_icon 'chevron-down', class: "pulldown-crd2"
-            =f.select :expiration_month, [['19', "19"], ['20', "20"]], { include_blank: true, selected: 0}, {class: "select-prefectures second"}
+            =f.select :exp_year, [['2019', "2019"], ['2020', '2020']], { include_blank: true, selected: 0}, {class: "select-prefectures second", id: "card_year"}
             %p.crd-fontyear
               年
           .form-group
-            =f.label :sec_cord, 'セキュリティコード'
+            =f.label :card_cvc, 'セキュリティコード'
             %span.form-require 必須
-            =f.text_field :sec_cord, class: "input-default", placeholder: "カード背面４桁もしくは３桁の番号"
+            =f.text_field :card_cvc, id: "card_cvc", class: "input-default", placeholder: "カード背面４桁もしくは３桁の番号"
           .form-help.text-right
             = link_to("/", target: "_blank") do
               = fa_icon 'question-circle'
               本人情報の登録について
-          =f.submit "次へ進む", class: "btn-default btn-red"
+          =f.submit "次へ進む", class: "btn-default btn-red", id: "submit_btn"
 
   %footer.single-footer
     %nav.footernav
