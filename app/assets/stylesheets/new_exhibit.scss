@@ -30,7 +30,7 @@
     font-size: 0;
     text-align: center;
   p{
-    margin: 50px auto;
+    margin: 10px auto;
     text-align: center;
     line-height: 1.5;
     font-size: 14px;
@@ -224,4 +224,8 @@
     color: $red;
   margin: 8px 0 0;
   }
+}
+
+.f_input_image{
+  display: none;
 }

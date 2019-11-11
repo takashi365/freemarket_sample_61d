@@ -1,6 +1,7 @@
 .item_list_box_item
   =link_to item_path(item) do
     .item_list_box_item__image
+      = image_tag item.images[0].image_url.url
       .image_price
         .image_price__enn
           ¥
