@@ -27,5 +27,6 @@
 /config/master.key
 .env
 
+
 # Ignore uploaded files in development
  /public/uploads/
