@@ -16,6 +16,11 @@ crumb :todo do
   parent :users
 end
 
+crumb :exhibited_items do
+  link "出品した商品 - 出品中",user_exhibited_items_path
+  parent :users
+end
+
 crumb :edit do
   link "プロフィール", edit_user_path
   parent :users
