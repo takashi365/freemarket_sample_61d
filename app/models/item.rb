@@ -4,6 +4,10 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
+  # validates :status,  inclusion: { in: [1] }
+  # validates :expense,  inclusion: { in: [1] }
+  # validates :prefecture, inclusion: { in: [1] }
+  # validates :arrival_date, inclusion: { in: [1] }
 
 
   enum status:{

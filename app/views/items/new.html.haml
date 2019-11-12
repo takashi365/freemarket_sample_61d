@@ -61,6 +61,8 @@
                 =f.select :status,Item.statuses,{},{class: 'select-exhibit',name: "prefectures"}
                 .exhibit_box__list__bottom__icon2
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
         .exhibit_box.flex
           .exhibit_box__grey
             配送について 
@@ -75,6 +77,8 @@
                 =f.select :expense,Item.expenses,{},{class:'select-exhibit',name: "prefectures"}
                 .exhibit_box__list__bottom__icon
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
             .exhibit_box__list
               .exhibit_box__list__top
                 .form-group
@@ -84,6 +88,8 @@
                 =f.select :prefecture,Item.prefectures,{},{class:'select-exhibit',name: "prefectures"}
                 .exhibit_box__list__bottom__icon2
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
                 .exhibit_box__list
               .exhibit_box__list__top
                 .form-group
@@ -93,6 +99,8 @@
                 =f.select :arrival_date,Item.arrival_dates,{},{class:'select-exhibit',name: "prefectures"}
                 .exhibit_box__list__bottom__icon3
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
         .exhibit_box.flex
           .exhibit_box__grey
             販売価格(300〜9,999,999)
