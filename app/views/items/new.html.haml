@@ -17,14 +17,11 @@
           .exhibit_main_pagging__up
             最大5枚までアップロードできます
           = f.fields_for :images, @item.images.build, local: true do |fin|
-            #preview
-            .dropzone-area
-              = fin.label :images, class: "dropzone-box", for: "upload-image" do
-                .exhibit_main_pagging__date
-                  .exhibit_main_pagging__date__content
-                    .input_area
-                      %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
-                      = fin.file_field :image_url, multiple: true, id: "upload-image", name: "images[image_url][]", class: 'f_input_image', type:"file" 
+            = fin.label :images, class: "dropzone-box", for: "upload-image" do
+              .exhibit_main_pagging__date
+                .exhibit_main_pagging__date__content
+                  %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
+                  = fin.file_field :image_url, multiple: true, id: "upload-image", name: "images[image_url][]", class: 'f_input_image', type:"file" 
         .exhibit_box
           .exhibit_box__name
             .form-group
