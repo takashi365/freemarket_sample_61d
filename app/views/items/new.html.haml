@@ -16,17 +16,19 @@
               必須
           .exhibit_main_pagging__up
             最大5枚までアップロードできます
-          %label
-            = f.fields_for :images, @item.images.build, local: true do |fin|
-              .exhibit_main_pagging__date
-                .exhibit_main_pagging__date__image
-                .exhibit_main_pagging__date__content
-                  %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
-                  = fin.file_field :image_url, class: 'f_input_image', type:"file" 
+          = f.fields_for :images, @item.images.build, local: true do |fin|
+            #preview
+            .dropzone-area
+              = fin.label :images, class: "dropzone-box", for: "upload-image" do
+                .exhibit_main_pagging__date
+                  .exhibit_main_pagging__date__content
+                    .input_area
+                      %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
+                      = fin.file_field :image_url, multiple: true, id: "upload-image", name: "images[image_url][]", class: 'f_input_image', type:"file" 
         .exhibit_box
           .exhibit_box__name
             .form-group
-            %label.fontweigth{for: "nickname"} 商品名
+            %label.fontweigth{for: "nickname"} 商品
             %span.form-require 必須
             = f.text_field :name, class:'f_input', placeholder: '品名(必須４０文字まで)'
           - if @item.errors.any?
@@ -107,7 +109,7 @@
                 .exhibit_box__list__prices__price__right.flex
                   .exhibit_box__list__prices__price__right__text
                     ¥
-                  = f.text_field :price,class:'f_input', placeholder: '例）300'
+                  = f.text_field :price, class:'f_input', placeholder: '例）300',id: "input"
             - if @item.errors.any?
               =render 'layouts/error_price', model: f.object 
             .exhibit_box__list__fees
@@ -115,13 +117,13 @@
                 .exhibit_box__list__rees__fee__left
                   販売手数料（10％）
                 .exhibit_box__list__fees__fee__right
-                  ー
+                  ¥
             .exhibit_box__list__profits
               .exhibit_box__list__profits__profit.flex
                 .exhibit_box__list__profits__profit__left
                   販売利益
                 .exhibit_box__list__profits__profit__right
-                  ー
+                  ¥
         .exhibit_box
           .exhibit_box__text
             %p

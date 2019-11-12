@@ -13,14 +13,18 @@ before_action :set_purchase,  only:[:purchase_page]
 
   def create
     @item = Item.new(item_params)
+    respond_to do |format|
     if @item.save
-      redirect_to item_exhibit_ok_path (@item)
+      params[:images][:image_url].each do |image|
+        @item.images.create(image_url: image, item_id: @item.id)
+      end
+      format.html{redirect_to item_exhibit_ok_path(@item)}
     else
      
-      render action: :new
+      format.html{render action: :new}
       
+      end
     end
-
   end
 
   def exhibit_ok
