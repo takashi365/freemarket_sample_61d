@@ -58,7 +58,7 @@
                 %label.fontweigth{for: "nickname"} 商品の状態
                 %span.form-require 必須
               .exhibit_box__list__bottom.clearfix
-                %select.select-exhibit{name: "prefectures"}
+                =f.select :status,Item.statuses,{},{class: 'select-exhibit',name: "prefectures"}
                 .exhibit_box__list__bottom__icon2
                   =fa_icon 'chevron-down'
         .exhibit_box.flex
