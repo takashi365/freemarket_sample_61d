@@ -6,8 +6,8 @@ class User < ApplicationRecord
   has_many :cards
   has_one :address
   accepts_nested_attributes_for :address
-  validates :nickname, presence: true, length: { maximum: 12 }, uniqueness: true
-  validates :email, presence: true
+  validates :nickname, presence: { message: "ニックネームが入力されていません" }, length: { maximum: 12, message: "ニックネームが長すぎます" }, uniqueness: { message: "既に存在するニックネームです" }
+  validates :email, presence: true,format: { with: /\A\S+@\S+\.\S+\z/ }
   validates :family_name_kanji, presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "全角のみで入力して下さい" }
   validates :family_name_kana, presence: true, format: { with: /\A[\p{katakana} ー－&&[^ -~｡-ﾟ]]+\z/, message: "全角カタカナのみで入力して下さい" }
   validates :first_name_kanji, presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "全角のみで入力して下さい" }

@@ -19,6 +19,9 @@ Bundler.require(*Rails.groups)
 
 module FreemarketSample61d
   class Application < Rails::Application
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance| 
+      html_tag
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.generators do |g|

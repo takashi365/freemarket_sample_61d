@@ -146,6 +146,10 @@
   background: $white;
   line-height: 1.5;
   font-size: 16px;
+  .half{
+    width: calc(50% - 6px);
+    display: inline-block;
+  }
 }
 button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="reset"], [type="search"], [type="submit"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], select, textarea{
   min-height: 1.5em;
@@ -153,10 +157,10 @@ button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local
 .input-default.half:first-of-type{
   margin-right: 8px;
 }
-.input-default.half{
-  width: calc(50% - 6px);
-  display: inline-block;
-}
+// .input-default.half{
+//   width: calc(50% - 6px);
+//   display: inline-block;
+// }
 
 .form-group:first-child{
   margin:0
