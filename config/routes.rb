@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get 'my_card'
     get 'identification'
     get 'exhibited_items'
+    get 'logout'
   end
   resources :signup do
     collection do

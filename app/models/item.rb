@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   accepts_nested_attributes_for :images
   validates :name, presence: true
   validates :description, presence: true
+  validates :price, presence: true, numericality: { only_integer: true, greater_than: 299, less_than: 9999999}
   validates :price, presence: true
   # validates :status,  inclusion: { in: [1] }
   # validates :expense,  inclusion: { in: [1] }
@@ -44,4 +45,5 @@ class Item < ApplicationRecord
     "---":0,
     １〜２日で発送:1,２〜３日で発送:2,４〜７日で発送:3
   },_prefix: true
+  
 end

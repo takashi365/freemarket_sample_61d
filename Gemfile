@@ -45,6 +45,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'dotenv-rails'
   gem 'squasher', '>= 0.6.0'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do

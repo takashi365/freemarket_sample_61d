@@ -47,7 +47,7 @@ crumb :identification do
 end
 
 crumb :show do
-  link "ログアウト", user_path
+  link "ログアウト", user_logout_path
   parent :users
 end
 
