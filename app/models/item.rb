@@ -4,14 +4,13 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
-  # validates :status,  inclusion: { in: [1] }
-  # validates :expense,  inclusion: { in: [1] }
-  # validates :prefecture, inclusion: { in: [1] }
-  # validates :arrival_date, inclusion: { in: [1] }
+  validates :status,  presence: true
+  validates :expense, presence: true
+  validates :prefecture, presence: true
+  validates :arrival_date, presence: true
 
 
-  enum status:{
-    "---":0,
+  enum status:{"---":0,
     新品・未使用:1,未使用に近い:2,目立った傷や汚れなし:3,やや傷や汚れあり:4, 汚れや傷あり:5,
     全体的に状態が悪い:6
     },_prefix: true
