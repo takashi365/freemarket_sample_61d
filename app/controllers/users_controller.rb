@@ -10,6 +10,9 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def logout
+  end
+
   def method_of_payment
   end
 
