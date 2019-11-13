@@ -57,9 +57,11 @@
                 %label.fontweigth{for: "nickname"} 商品の状態
                 %span.form-require 必須
               .exhibit_box__list__bottom.clearfix
-                %select.select-exhibit{name: "prefectures"}
+                =f.select :status, Item.statuses.keys, {}, {class: 'select-exhibit'}
                 .exhibit_box__list__bottom__icon2
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
         .exhibit_box.flex
           .exhibit_box__grey
             配送について 
@@ -71,27 +73,33 @@
                 %label.fontweigth{for: "nickname"} 配送料の負担
                 %span.form-require 必須
               .exhibit_box__list__bottom
-                %select.select-exhibit{name: "prefectures"}
+                =f.select :expense,Item.expenses.keys,{},{class:'select-exhibit'}
                 .exhibit_box__list__bottom__icon
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
             .exhibit_box__list
               .exhibit_box__list__top
                 .form-group
                 %label.fontweigth{for: "nickname"} 発送元の地域
                 %span.form-require 必須
               .exhibit_box__list__bottom.clearfix
-                %select.select-exhibit{name: "prefectures"}
+                =f.select :prefecture,Item.prefectures.keys,{},{class:'select-exhibit'}
                 .exhibit_box__list__bottom__icon2
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
                 .exhibit_box__list
               .exhibit_box__list__top
                 .form-group
                 %label.fontweigth{for: "nickname"} 発送日までの日数
                 %span.form-require 必須
               .exhibit_box__list__bottom.clearfix
-                %select.select-exhibit{name: "prefectures"}
+                =f.select :arrival_date,Item.arrival_dates.keys,{},{class:'select-exhibit'}
                 .exhibit_box__list__bottom__icon3
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
         .exhibit_box.flex
           .exhibit_box__grey
             販売価格(300〜9,999,999)
