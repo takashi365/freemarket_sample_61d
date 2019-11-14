@@ -1,5 +1,7 @@
 class Item < ApplicationRecord
   has_many :images
+  belongs_to :seller, class_name: "User",:foreign_key => 'seller_id'
+  belongs_to :buyer, class_name: "User",:foreign_key => 'buyer_id'
   accepts_nested_attributes_for :images
   validates :name, presence: true
   validates :description, presence: true
@@ -9,7 +11,6 @@ class Item < ApplicationRecord
   validates :expense, presence: true
   validates :prefecture, presence: true
   validates :arrival_date, presence: true
-
 
   enum status:{"---":0,
     新品・未使用:1,未使用に近い:2,目立った傷や汚れなし:3,やや傷や汚れあり:4, 汚れや傷あり:5,

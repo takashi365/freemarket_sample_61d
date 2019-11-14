@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :cards
   has_one :address
+  has_many :seller_items, class_name: 'Item', :foreign_key => 'seller_id'
+  has_many :buyer_items, class_name: 'Item', :foreign_key => 'buyer_id'
   accepts_nested_attributes_for :address
   validates :nickname, presence: true, length: { maximum: 12 }, uniqueness: true
   validates :email, presence: true
