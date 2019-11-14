@@ -56,7 +56,7 @@
             .flex-box
               =f.text_field :family_name_kanji, class: "input-default half", placeholder: "例) 山田"
               =f.text_field :first_name_kanji, class: "input-default half", placeholder: "例) 彩"
-            .flex-box
+            .padding-top
               = render partial: 'shared/error-messages', locals: {user: @user, column: "family_name_kanji"}
               = render partial: 'shared/error-messages', locals: {user: @user, column: "first_name_kanji"}
           .form-group
@@ -66,7 +66,7 @@
             .flex-box
               =f.text_field :family_name_kana, class: "input-default half", placeholder: "例) ヤマダ"
               =f.text_field :first_name_kana, class: "input-default half", placeholder: "例) アヤ"
-            .flex-box
+            .padding-top
               = render partial: 'shared/error-messages', locals: {user: @user, column: "family_name_kana"}
               = render partial: 'shared/error-messages', locals: {user: @user, column: "first_name_kana"}
           .form-group
@@ -87,7 +87,7 @@
                 = fa_icon 'chevron-down', class: "pulldown"
               %span 日
             .clearfix
-            .flex-box
+            .padding-top
               = render partial: 'shared/error-messages', locals: {user: @user, column: "year"}
               = render partial: 'shared/error-messages', locals: {user: @user, column: "month"}
               = render partial: 'shared/error-messages', locals: {user: @user, column: "day"}
