@@ -76,3 +76,4 @@ gem 'recaptcha', require: "recaptcha/rails"
 gem 'active_hash'
 gem 'gretel'
 gem 'payjp'
+gem 'rails-i18n', '~> 5.1'
