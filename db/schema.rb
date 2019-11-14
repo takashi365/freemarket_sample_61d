@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 2019_11_14_042625) do
     t.integer "arrival_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "seller_id", foreign_key: true
-    t.integer "buyer_id", foreign_key: true
+    t.integer "seller_id"
+    t.integer "buyer_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
