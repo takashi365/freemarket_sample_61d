@@ -17,8 +17,12 @@
               .purchase_content__price__left
                 ¥
                 =@item.price
-              .purchase_content__price__right
-                送料込み
+              -if @item.expense == "送料込み（出品者負担）"
+                .purchase_content__price__right
+                  送料込み
+              -else
+                .purchase_content__price__right
+                  着払い
             .purchase_content__point
               .purchase_content__point__text
                 ポイントはありません
