@@ -22,8 +22,8 @@ class User < ApplicationRecord
   def fi_name_kana
     if first_name_kana.blank?
       errors.add(:first_name_kana, :blank)
-    else !VALID_FIKANA_REGEX.match?(first_name_kana)
-      errors.add(:first_name_kana, :format)
+    # else !VALID_FIKANA_REGEX.match?(first_name_kana)
+    #   errors.add(:first_name_kana, :format)
     end
   end
   
@@ -31,8 +31,8 @@ class User < ApplicationRecord
   def fi_name_kanji
     if first_name_kanji.blank?
       errors.add(:first_name_kanji, :blank)
-    else !VALID_FIKANJI_REGEX.match?(first_name_kanji)
-      errors.add(:first_name_kanji, :format)
+    # else !VALID_FIKANJI_REGEX.match?(first_name_kanji)
+    #   errors.add(:first_name_kanji, :format)
     end
   end
 
@@ -40,8 +40,8 @@ class User < ApplicationRecord
   def fa_name_kana
     if family_name_kana.blank?
       errors.add(:family_name_kana, :blank)
-    else !VALID_FAKANA_REGEX.match?(family_name_kana)
-      errors.add(:family_name_kana, :format)
+    # else !VALID_FAKANA_REGEX.match?(family_name_kana)
+    #   errors.add(:family_name_kana, :format)
     end
   end
 
@@ -49,8 +49,8 @@ class User < ApplicationRecord
   def fa_name_kanji
     if family_name_kanji.blank?
       errors.add(:family_name_kanji, :blank)
-    else !VALID_FAKANJI_REGEX.match?(family_name_kanji)
-      errors.add(:family_name_kanji, :format)
+    # else !VALID_FAKANJI_REGEX.match?(family_name_kanji)
+    #   errors.add(:family_name_kanji, :format)
     end
   end
 
