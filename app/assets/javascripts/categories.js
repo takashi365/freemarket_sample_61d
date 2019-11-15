@@ -1,12 +1,12 @@
 $(function(){
   function appendOption(category){
-    var html = `<option value="${category.name}" data-category="${category.id}">${category.name}</option>`; 
+    var html = `<option value="${category.id}" data-category="${category.id}">${category.name}</option>`; 
     return html;
   }
   function appendChildrenBox(inserHTML){  //子カテゴリー
     var childSelectHtml = '';
     childSelectHtml = `<div class="exhibit_box__list__bottom" id="children_wrapper">
-                          <select class="select-exhibit" id="child_category" name="category_id">
+                          <select class="select-exhibit" id="child_category" name="item[category_id]">
                             <option value="---" data-category="---">---</option>
                             ${inserHTML}
                           <div class="exhibit_box__list__bottom__icon">
@@ -18,7 +18,7 @@ $(function(){
   function appendGrandchidrenBox(inserHTML){   //孫カテゴリー
     var grandchildSelectHtml = '';
     grandchildSelectHtml = `<div class="exhibit_box__list__bottom" id= "grandchildren_wrapper">
-                          <select class="select-exhibit" id="grandchild_category" name="category_id">
+                          <select class="select-exhibit" id="grandchild_category" name="item[category_id]">
                             <option value="---" data-category="---">---</option>
                             ${inserHTML}
                           <div class="exhibit_box__list__bottom__icon">

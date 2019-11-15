@@ -2,14 +2,14 @@ class Item < ApplicationRecord
   has_many :images
   belongs_to :category
   accepts_nested_attributes_for :images
-  validates :name, presence: true
-  validates :description, presence: true
-  validates :price, presence: true, numericality: { only_integer: true, greater_than: 299, less_than: 9999999}
-  validates :price, presence: true
-  validates :status,  presence: true
-  validates :expense, presence: true
-  validates :prefecture, presence: true
-  validates :arrival_date, presence: true
+  # validates :name, presence: true
+  # validates :description, presence: true
+  # validates :price, presence: true, numericality: { only_integer: true, greater_than: 299, less_than: 9999999}
+  # validates :status,  presence: true
+  # validates :expense, presence: true
+  # validates :prefecture, presence: true
+  # validates :arrival_date, presence: true
+  # validates :category_id, presence: true
 
 
   enum status:{"---":0,
