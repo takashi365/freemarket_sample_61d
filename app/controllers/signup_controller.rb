@@ -109,7 +109,7 @@ class SignupController < ApplicationController
       :year,
       :month,
       :day,
-      address_attributes:[:id, :post_code, :prefectures, :city, :address, :after_address, :phone_number]
+      address_attributes:[:id, :post_code, :prefecture_id, :city, :address, :after_address, :phone_number]
     )
   end
 
