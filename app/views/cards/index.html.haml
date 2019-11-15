@@ -40,11 +40,11 @@
             =f.label '有効期限'
             %span.form-require 必須
             = fa_icon 'chevron-down', class: "pulldown-crd"
-            =f.select :exp_month, [['12', '12'], ['2', "2"]], { include_blank: true, selected: 0}, {class: "select-prefectures", id: "card_month"}
+            =f.select :exp_month, ['1',1],['2',2],['3',3],['4',4],['5',5],['6',6],['7',7],['8',8],['9',9],['10',10],['11',11],['12',12], { include_blank: true, selected: 0}, {class: "select-prefectures", id: "card_month"}
             %p.crd-fontmonth
               月
             = fa_icon 'chevron-down', class: "pulldown-crd2"
-            =f.select :exp_year, [['---',""],['2019',2019],['2020',2020],['2021',2021],['2022',2022],['2023',2023],['2024',2024],['2025',2025],['2026',2026],['2027',2027],['2028',2028]], { include_blank: true, selected: 0}, {class: "select-prefectures second", id: "card_year"}
+            =f.select :exp_year, [['2019',2019],['2020',2020],['2021',2021],['2022',2022],['2023',2023],['2024',2024],['2025',2025],['2026',2026],['2027',2027],['2028',2028]], { include_blank: true, selected: 0}, {class: "select-prefectures second", id: "card_year"}
             %p.crd-fontyear
               年
           .form-group
