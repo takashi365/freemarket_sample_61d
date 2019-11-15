@@ -1,6 +1,11 @@
 ja:
   activerecord:
     attributes:
+      address:
+        post_code: ×
+        prefectures: ×
+        city: ×
+        address: ×
       user:
         nickname: ×
         email: ×
@@ -15,6 +20,14 @@ ja:
         day: ×日：
     errors:
       models:
+        address:
+          attributes:
+            address:
+              format: 全て全角で入力してください（数字含む）
+            city:
+              format: 全て全角で入力してください（数字含む）
+            post_code:
+              format: ハイフン付き半角数字７文字で入力してください
         user:
           attributes:
             email:

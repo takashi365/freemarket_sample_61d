@@ -47,7 +47,11 @@ class SignupController < ApplicationController
       day: session[:day],
       address_attributes: set_params[:address_attributes]
     )
-    if @user.save
+    
+    if @user.invalid?
+      # binding.pry
+      render '/signup/address_input'
+    elsif @user.save
       session[:id] = @user.id
       flash[:notice] = 'ユーザー登録が完了しました'
       redirect_to cards_path
