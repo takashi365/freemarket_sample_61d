@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   has_many :images
+  belongs_to :category
   accepts_nested_attributes_for :images
   validates :name, presence: true
   validates :description, presence: true
