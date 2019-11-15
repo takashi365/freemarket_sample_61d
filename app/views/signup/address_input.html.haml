@@ -29,30 +29,34 @@
             .form-group
               =f.label :family_name_kanji, 'お名前(全角)'
               %span.form-require 必須
-              =f.text_field :family_name_kanji, class: "input-default", placeholder: "例) 山田"
-              =f.text_field :first_name_kanji, class: "input-default", placeholder: "例) 彩"
+              =f.text_field :family_name_kanji, class: "input-default", placeholder: "例) 山田", value: "#{session[:family_name_kanji]}"
+              =f.text_field :first_name_kanji, class: "input-default", placeholder: "例) 彩", value: "#{session[:first_name_kanji]}"
             .form-group
               =f.label :family_name_kanji, 'お名前カナ(全角)'
               %span.form-require 必須
-              =f.text_field :family_name_kana, class: "input-default", placeholder: "例) ヤマダ"
-              =f.text_field :first_name_kana, class: "input-default", placeholder: "例) アヤ"
+              =f.text_field :family_name_kana, class: "input-default", placeholder: "例) ヤマダ", value: "#{session[:family_name_kana]}"
+              =f.text_field :first_name_kana, class: "input-default", placeholder: "例) アヤ", value: "#{session[:first_name_kana]}"
             .form-group
               =i.label :post_code, '郵便番号'
               %span.form-require 必須
               =i.text_field :post_code, class: "input-default", placeholder: "例) 123-4567"
+              = render partial: 'shared/error-messages', locals: {user: @user.address, column: "post_code"}
             .form-group.posi-re
-              =i.label :post_number, '都道府県'
+              =i.label :prefectures, '都道府県'
               %span.form-require 必須
               = fa_icon 'chevron-down', class: "pulldown"
               =i.select :prefectures, [['北海道', "1"],['沖縄', "2"]], { include_blank: true, selected: 1}, {class: "prefectures-box"}
+              = render partial: 'shared/error-messages', locals: {user: @user.address, column: "prefectures"}
             .form-group
               =i.label :city, '市区町村'
               %span.form-require 必須
               =i.text_field :city, class: "input-default", placeholder: "例）横浜市緑区"
+              = render partial: 'shared/error-messages', locals: {user: @user.address, column: "city"}
             .form-group
               =i.label :address, '番地'
               %span.form-require 必須
               =i.text_field :address, class: "input-default", placeholder: "例）青山１−１−１"
+              = render partial: 'shared/error-messages', locals: {user: @user.address, column: "address"}
             .form-group
               =i.label :after_address, '建物名'
               %span 任意
