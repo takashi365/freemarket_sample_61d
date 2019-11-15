@@ -45,7 +45,7 @@
               =i.label :prefectures, '都道府県'
               %span.form-require 必須
               = fa_icon 'chevron-down', class: "pulldown"
-              =i.select :prefectures, [['北海道', "1"],['沖縄', "2"]], { include_blank: true, selected: 1}, {class: "prefectures-box"}
+              =i.collection_select :prefecture_id, Prefecture.all, :id, :name, {prompt: ""}, {class: "prefectures-box"}
               = render partial: 'shared/error-messages', locals: {user: @user.address, column: "prefectures"}
             .form-group
               =i.label :city, '市区町村'
