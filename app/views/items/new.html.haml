@@ -52,6 +52,8 @@
                 =f.select :category_id, @category_parent_array, {},{class: 'select-exhibit', id:'parent_category'}
                 .exhibit_box__list__bottom__icon
                   =fa_icon 'chevron-down'
+              - if @item.errors.any?
+                = render 'layouts/error_item_enum'
             .exhibit_box__list
               .exhibit_box__list__top
                 .form-group
