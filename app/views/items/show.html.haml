@@ -88,6 +88,12 @@
   .buy_btn
     =link_to item_purchase_page_path(@item),class: 'buy_btn' do
       購入画面に進む
+  .edit_btn
+    = link_to '商品の編集', edit_item_path(@item)
+  .on_hold_btn
+    商品の一旦停止をする
+  .delete_btn
+    = link_to 'この商品を削除する', '#{@item}', method: :delete, data: {confirm: "本当に削除しますか？"}
   .item_buyer_comment
     =@item.description
   .item_btn_list.clearfix

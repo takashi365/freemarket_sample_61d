@@ -1,17 +1,17 @@
 class Item < ApplicationRecord
-  has_many :images
+  has_many :images, dependent: :destroy
   belongs_to :category
   # belongs_to :seller, class_name: "User",:foreign_key => 'seller_id'
   # belongs_to :buyer, class_name: "User",:foreign_key => 'buyer_id'
   accepts_nested_attributes_for :images
-  # validates :name, presence: true
-  # validates :description, presence: true
-  # validates :price, presence: true, numericality: { only_integer: true, greater_than: 299, less_than: 9999999}
-  # validates :status,  presence: true
-  # validates :expense, presence: true
-  # validates :prefecture, presence: true
-  # validates :arrival_date, presence: true
-  # validates :category_id, presence: true
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :price, presence: true, numericality: { only_integer: true, greater_than: 299, less_than: 9999999}
+  validates :status,  presence: true
+  validates :expense, presence: true
+  validates :prefecture, presence: true
+  validates :arrival_date, presence: true
+  validates :category_id, presence: true
 
   enum status:{"---":0,
     新品・未使用:1,未使用に近い:2,目立った傷や汚れなし:3,やや傷や汚れあり:4, 汚れや傷あり:5,

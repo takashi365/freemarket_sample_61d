@@ -16,17 +16,16 @@
               必須
           .exhibit_main_pagging__up
             最大5枚までアップロードできます
-          %label
-            = f.fields_for :images, @item.images.build, local: true do |fin|
+          = f.fields_for :images, @item.images.build, local: true do |fin|
+            = fin.label :images, class: "dropzone-box", for: "upload-image" do
               .exhibit_main_pagging__date
-                .exhibit_main_pagging__date__image
                 .exhibit_main_pagging__date__content
                   %p ドラッグアンドドロップまたはクリックしてファイルをアップロード
-                  = fin.file_field :image_url, class: 'f_input_image', type:"file" 
+                  = fin.file_field :image_url, multiple: true, id: "upload-image", name: "images[image_url][]", class: 'f_input_image', type:"file" 
         .exhibit_box
           .exhibit_box__name
             .form-group
-            %label.fontweigth{for: "nickname"} 商品名
+            %label.fontweigth{for: "nickname"} 商品
             %span.form-require 必須
             = f.text_field :name, class:'f_input', placeholder: '品名(必須４０文字まで)'
           - if @item.errors.any?
@@ -43,17 +42,15 @@
             商品の詳細
             =fa_icon 'question-circle',class:'question-circle'
           .exhibit_box__lists
-            .exhibit_box__list__category
+            .exhibit_box__list
               .exhibit_box__list__top
                 .form-group
                 %label.fontweigth{for: "nickname"} カテゴリー
                 %span.form-require 必須
               .exhibit_box__list__bottom
-                =f.select :category_id, @category_parent_array, {},{class: 'select-exhibit', id:'parent_category'}
+                %select.select-exhibit{name: "prefectures"}
                 .exhibit_box__list__bottom__icon
                   =fa_icon 'chevron-down'
-              - if @item.errors.any?
-                = render 'layouts/error_item_enum'
             .exhibit_box__list
               .exhibit_box__list__top
                 .form-group
@@ -117,7 +114,7 @@
                 .exhibit_box__list__prices__price__right.flex
                   .exhibit_box__list__prices__price__right__text
                     ¥
-                  = f.text_field :price,class:'f_input',id: 'input', placeholder: '例）300'
+                  = f.text_field :price, class:'f_input', placeholder: '例）300',id: "input"
             - if @item.errors.any?
               =render 'layouts/error_price', model: f.object 
             .exhibit_box__list__fees
@@ -125,31 +122,19 @@
                 .exhibit_box__list__rees__fee__left
                   販売手数料（10％）
                 .exhibit_box__list__fees__fee__right
-                  ー
+                  ¥
             .exhibit_box__list__profits
               .exhibit_box__list__profits__profit.flex
                 .exhibit_box__list__profits__profit__left
                   販売利益
                 .exhibit_box__list__profits__profit__right
-                  ー
+                  ¥
         .exhibit_box
           .exhibit_box__text
-            %p
-              %a禁止されている出品、
-              %a行為
-              を必ずご確認ください。
-            %p
-              またブランド品でシリアルナンバー等がある場合はご記載ください。
-              %a偽ブランドの販売
-              は犯罪であり処罰される可能性があります。
-            %p
-              また、出品をもちまして
-              %a加盟店規約
-              に同意したことになります。
-          = f.submit '出品する', class: 'exhibit_box__btn'
+          = f.submit '変更する', class: 'exhibit_box__btn'
           .exhibit_box__back
             =link_to root_path do
-              もどる
+              キャンセル
   %footer.single-footer
     %nav.footernav
       %ul.clearfix
