@@ -48,6 +48,10 @@ before_action :set_purchase,  only:[:purchase_page]
   end 
 
   def purchase_page
+    card = Card.where(user_id: current_user.id).first
+    Payjp.api_key = Rails.application.credentials.aws[:pay_secret_key]
+    customer = Payjp::Customer.retrieve(card.customer_id)
+    @default_card_information = customer.cards.retrieve(card.customer_card)
   end
 
   def images_up

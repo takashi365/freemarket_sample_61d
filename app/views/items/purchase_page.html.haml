@@ -35,8 +35,10 @@
             .purchase_content__red.clearfix
               配送先と支払い方法の入力を完了して下さい。
             .purchase_content__btn
-              =link_to item_purchase_pay_path do
-                購入する
+              = form_with local:true, url: pay_cards_path, id: "card_charge" do |f|
+                = f.hidden_field :item_id, value: @item.id
+                = f.hidden_field :item_price, value: @item.price
+                = f.submit "購入する", class: "purchase_content__btn"
         .purchase_address
           .purchase_address__content
             .purchase_address__content__top
@@ -50,20 +52,7 @@
                 廣田亜由美
             .purchase_address__content__btn
               変更する ＞
-        .purchase_pay
-          .purchase_address__content
-            .purchase_address__content__top
-              支払い方法
-            .purchase_address__content__bottom
-              .purchase_address__content__top__card
-                ***********001
-              .purchase_address__content__top__day
-                09/21
-              .purchase_address__content__top__cardname
-                =image_tag 'logo_visa.gif',class:'card'
-                
-            .purchase_address__content__btn
-              変更する ＞
+        = render template: "cards/show"
 
   %footer.single-footer
     %nav.footernav
