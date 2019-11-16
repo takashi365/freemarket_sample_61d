@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
 before_action :set_item, only:[:show]
+before_action :get_parent, only:[:new,:create]
 before_action :set_purchase,  only:[:purchase_page]
+
 
   def index
     @item = Item.order("created_at DESC").page(params[:item]).per(10)
@@ -9,10 +11,7 @@ before_action :set_purchase,  only:[:purchase_page]
   def new
     @item = Item.new
     @item.images.build
-    @category_parent_array = ["---"]
-    Category.where(ancestry: nil).each do |parent|
-    @category_parent_array << parent.category_name
-    end
+    
   end
 
 
@@ -26,6 +25,7 @@ before_action :set_purchase,  only:[:purchase_page]
 
   def create
     @item = Item.new(item_params)
+    
     # respond_to do |format|
     if @item.save
       # params[:images][:image_url].each do |image|
@@ -35,9 +35,10 @@ before_action :set_purchase,  only:[:purchase_page]
       redirect_to item_exhibit_ok_path(@item)
     else
      
+      
       # format.html{render action: :new}
       render action: :new
-  
+      
     end
   end
 
@@ -83,6 +84,12 @@ before_action :set_purchase,  only:[:purchase_page]
     @item = Item.find(params[:item_id])
   end
 
+  def get_parent
+    @category_parent_array = ["---"]
+    Category.where(ancestry: nil).each do |parent|
+    @category_parent_array << parent.category_name
+    end
+  end
 end
 
 
