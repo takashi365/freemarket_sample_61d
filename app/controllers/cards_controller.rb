@@ -41,7 +41,4 @@ class CardsController < ApplicationController
   redirect_to item_purchase_pay_path(id)
   end
 
-  def done
-  end
-
 end
