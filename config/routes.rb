@@ -35,7 +35,6 @@ Rails.application.routes.draw do
   resources :cards do
     collection do
       post 'pay' => 'cards#pay', as: 'pay'
-      get 'done' => 'cards#done', as: 'done'
     end
   end
 end
