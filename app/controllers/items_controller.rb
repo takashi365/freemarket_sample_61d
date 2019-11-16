@@ -11,7 +11,7 @@ before_action :set_purchase,  only:[:purchase_page]
   def new
     @item = Item.new
     @item.images.build
-    
+
   end
 
 
@@ -62,6 +62,7 @@ before_action :set_purchase,  only:[:purchase_page]
   end
 
   def show
+    @category = Category.all
   end 
 
   def purchase_page
