@@ -136,7 +136,8 @@
         =fa_icon 'pinterest',class: 'items_icons__pinterest'
 .user_another_items
   .user_another_items__title
-    〇〇さんのその他の出品
+    =@item.seller.nickname
+    さんのその他の出品
   .user_another_item.clearfix.flex
     .user_another_item_boxs
       .item_list_box_item__image
