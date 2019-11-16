@@ -32,5 +32,9 @@ Rails.application.routes.draw do
       get 'entry_done' 
     end
   end
-  resources :cards
+  resources :cards do
+    collection do
+      post 'pay' => 'cards#pay', as: 'pay'
+    end
+  end
 end

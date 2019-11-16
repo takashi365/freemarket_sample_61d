@@ -24,4 +24,21 @@ class CardsController < ApplicationController
         end
     end
   end
+
+  def show
+  end
+
+  def pay
+    id = params[:item_id]
+    price = params[:item_price]
+    card = Card.where(user_id: current_user.id).first
+    Payjp.api_key = Rails.application.credentials.aws[:pay_secret_key]
+    Payjp::Charge.create(
+      :amount => price,
+      :customer => card.customer_id,
+      :currency => 'jpy',
+    )
+  redirect_to item_purchase_pay_path(id)
+  end
+
 end

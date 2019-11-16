@@ -60,9 +60,9 @@ ActiveRecord::Schema.define(version: 2019_11_15_062245) do
     t.integer "arrival_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "category_id"
     t.integer "seller_id"
     t.integer "buyer_id"
+    t.bigint "category_id"
     t.index ["category_id"], name: "index_items_on_category_id"
   end
 
