@@ -6,7 +6,12 @@ Rails.application.routes.draw do
     get 'purchase_pay'
     get 'exhibit_ok'
     get 'images_up'
+  collection do
+    get 'get_category_children', defaults: { format: 'json' }
+    get 'get_category_grandchildren', defaults: { format: 'json' }
+    end
   end
+  
   resources :users do
     get 'method_of_payment'
     get 'notification'
