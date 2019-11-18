@@ -86,19 +86,22 @@
     -else
       .purchase_content__price__right
         着払い
-  -if @item.buyer_id.nil?
+  -if current_user.id != @item.seller_id && @item.buyer_id.nil?
     .buy_btn
       =link_to item_purchase_page_path(@item),class: 'buy_btn' do
         購入画面に進む
-  -else
+  -elsif current_user.id != @item.seller_id && @item.buyer_id.present?
     .buy_btn2
       売り切れました
-  .edit_btn
-    = link_to '商品の編集', edit_item_path(@item)
-  .on_hold_btn
-    商品の一旦停止をする
-  .delete_btn
-    = link_to 'この商品を削除する', '#{@item}', method: :delete, data: {confirm: "本当に削除しますか？"}
+  -if @item.seller_id == current_user.id
+    .listing-item-change-box
+      .btn-default.btn-red
+        = link_to '商品の編集', edit_item_path(@item)
+      .or or
+      .btn-default.btn-gray 
+        商品の一旦停止をする
+      .btn-default.btn-gray 
+        = link_to 'この商品を削除する', '#{@item}', method: :delete, data: {confirm: "本当に削除しますか？"}
   .item_buyer_comment
     =@item.description
   .item_btn_list.clearfix
