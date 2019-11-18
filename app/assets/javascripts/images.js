@@ -11,7 +11,7 @@ $(document).on('change', 'input[type="file"]', function(event){
   inputs.push($(this));                   //配列にfileをpush
   var img = $('<div class="images_up_contents"><img></div>');
   reader.onload = function(e){            //以下に読み込みが完了したら実行したい処理を記述する
-    var btm_upload = $('<div class="images_up_contents__bottom flex"><div class="images_up_contents__bottom__left">編集</div><div class="images_up_contents__bottom__right">削除</div></div>');
+    var btm_upload = $('<div class="images_up_contents__bottom flex"><div class="images_up_contents__bottom__left edit btn">編集</div><div class="images_up_contents__bottom__right">削除</div></div>');
     img.append(btm_upload);              //指定した子要素の最後にテキスト文字やHTML要素を追加,imgにbtm_uploadを追加
     img.find('img').attr({               // imgからimgを探しsrcをresultとして返す
       src: e.target.result
@@ -22,9 +22,7 @@ $(document).on('change', 'input[type="file"]', function(event){
 
 
   if(images.length == 5) {
-    dropzone.css({
-      'display': 'none'
-    })
+    dropzone.addClass('hit')
     $.each(images, function(index, image) {
       image.attr('data-image', index);
       preview.append(image);
@@ -40,16 +38,44 @@ $(document).on('change', 'input[type="file"]', function(event){
       })
     }
     if(images.length == 3) {
-      dropzone.css({
+      $('#preview').empty();
+      $.each(images, function(index, image) {
+        image.attr('data-image', index);
+        preview.append(image);
+      })
+      input_area.css({
         'font-size': `15px`
       })
-      dropzone.find('p').replaceWith('<i class="fa fa-camera"></i>')
-    return;
-  
+      input_area.find('p').replaceWith('<i class="fa fa-camera"></i>')
     }
  var new_image = $(`<input multiple= "multiple" name="images[image_url][]" class="images_up_contents__up" data-image= ${images.length} type="file" id="upload-image">`);
  input_area.prepend(new_image);
 });
+$(document).on('click', '.images_up_contents__bottom__right', function() {
+  console.log(images.length)
+  if(images.length == 5) {
+    dropzone.removeClass('hit')
+  }
+  var target_image = $(this).parent().parent();
+  $.each(inputs, function(index, input){
+    if ($(this).data('image') == target_image.data('image')){
+      $(this).remove();
+      target_image.remove();
+      var num = $(this).data('image');
+      images.splice(num, 1);
+    }
+  });
+});
+$('input[type= "file"]:first').attr({
+  'data-image': inputs.length
+})
+$.each(inputs, function(index, input) {
+  var input = $(this)
+  input.attr({
+    'data-image': index
+  })
+  $('input[type= "file"]:first').after(input)
+})
 });
 
 
