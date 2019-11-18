@@ -25,7 +25,6 @@ before_action :set_purchase,  only:[:purchase_page]
 
   def create
     @item = Item.new(item_params)
-    # binding.pry
     respond_to do |format|
       if @item.save
           params[:images][:image_url].each do |image|

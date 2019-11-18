@@ -49,8 +49,6 @@ $(document).on('change', 'input[type="file"]', function(event){
     }
  var new_image = $(`<input multiple= "multiple" name="images[image_url][]" class="images_up_contents__up" data-image= ${images.length} type="file" id="upload-image">`);
  input_area.prepend(new_image);
-
-  
 });
 });
 
