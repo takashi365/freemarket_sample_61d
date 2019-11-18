@@ -55,7 +55,6 @@ $(function(){
       $('#grandchildren_wrapper').remove();
     }
   });
-  console.log("This")
   ///子カテゴリー選択後
   $('.exhibit_box__list__category').on('change', '#child_category', function(){
     var childId = $('#child_category option:selected').data('category'); //選択された子カテゴリーのidを取得

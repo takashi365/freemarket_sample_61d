@@ -25,20 +25,16 @@ before_action :set_purchase,  only:[:purchase_page]
 
   def create
     @item = Item.new(item_params)
-    
-    # respond_to do |format|
-    if @item.save
-      # params[:images][:image_url].each do |image|
-      #   @item.images.create(image_url: image, item_id: @item.id)
-      # end
-      # format.html{redirect_to item_exhibit_ok_path(@item)}
-      redirect_to item_exhibit_ok_path(@item)
-    else
-     
-      
-      # format.html{render action: :new}
-      render action: :new
-      
+    respond_to do |format|
+      if @item.save
+          params[:images][:image_url].each do |image|
+          @item.images.create(image_url: image, item_id: @item.id)
+          end
+        format.html{redirect_to item_exhibit_ok_path(@item)}
+      else
+      @item.images.build
+      format.html{render action: 'new'}
+      end
     end
   end
 

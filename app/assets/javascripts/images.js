@@ -1,12 +1,11 @@
-$(document).on('turbolinks:load', function(){
-  var dropzone = $('.dropzone-area');
-  var dropzone_box = $('.dropzone-box');
+$(function(){
+  var dropzone = $('.exhibit_main_pagging__date__content');
   var images = [];
   var inputs  =[];
   var input_area = $('.input_area');
   var preview = $('#preview');
 
-$(document).on('change', 'input[type= "file"].uplpad-image', function(event){
+$(document).on('change', 'input[type="file"]', function(event){
   var file = $(this).prop('files')[0];    //prop()でアップロードの状態を取得し変数に格納
   var reader = new FileReader();          //filereaderのインスタンス作成
   inputs.push($(this));                   //配列にfileをpush
@@ -26,6 +25,10 @@ $(document).on('change', 'input[type= "file"].uplpad-image', function(event){
     dropzone.css({
       'display': 'none'
     })
+    $.each(images, function(index, image) {
+      image.attr('data-image', index);
+      preview.append(image);
+    })
   } else {
       $('#preview').empty();
       $.each(images, function(index, image) {
@@ -33,19 +36,19 @@ $(document).on('change', 'input[type= "file"].uplpad-image', function(event){
         preview.append(image);
       })
       dropzone.css({
-        'width': `calc(100% - (135px * ${images.length}))`
+        'width': `calc(100% - (180px * ${images.length}))`
       })
     }
-    if(images.length == 4) {
+    if(images.length == 3) {
+      dropzone.css({
+        'font-size': `15px`
+      })
       dropzone.find('p').replaceWith('<i class="fa fa-camera"></i>')
-    
     return;
   
     }
  var new_image = $(`<input multiple= "multiple" name="images[image_url][]" class="images_up_contents__up" data-image= ${images.length} type="file" id="upload-image">`);
-  exhibit_main_pagging__date__image.prepend(new_image);
-
-  
+ input_area.prepend(new_image);
 });
 });
 
