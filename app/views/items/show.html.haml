@@ -43,12 +43,7 @@
         .iteme_page_main__view_right__box_left
           カテゴリー
         .iteme_page_main__view_right__box_right
-          - id = @item.category_id
-          =@category[id].parent.parent.category_name
-          >
-          =@category[id].parent.category_name
-          >
-          =@category[id].category_name
+          レディース
       .iteme_page_main__view_right__box.flex
         .iteme_page_main__view_right__box_left
           ブランド
@@ -90,9 +85,13 @@
     -else
       .purchase_content__price__right
         着払い
-  .buy_btn
-    =link_to item_purchase_page_path(@item),class: 'buy_btn' do
-      購入画面に進む
+  -if @item.buyer_id.nil?
+    .buy_btn
+      =link_to item_purchase_page_path(@item),class: 'buy_btn' do
+        購入画面に進む
+  -else
+    .buy_btn2
+      売り切れました
   .edit_btn
     = link_to '商品の編集', edit_item_path(@item)
   .on_hold_btn
