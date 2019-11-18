@@ -78,7 +78,7 @@ before_action :set_purchase,  only:[:purchase_page]
   private
 
   def item_params
-    params.require(:item).permit( :name, :description, :price, :status, :prefecture, :expense, :category_id, :arrival_date, images_attributes:[:image_url])
+    params.require(:item).permit( :name, :description, :price, :status, :prefecture, :expense, :category_id,:seller_id, :arrival_date, images_attributes:[:image_url]).merge(seller_id: current_user.id)
   end
 
   def set_item
