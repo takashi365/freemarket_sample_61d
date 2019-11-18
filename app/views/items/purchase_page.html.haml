@@ -45,11 +45,15 @@
               配送先
             .purchase_address__content__bottom
               .purchase_address__content__top__num
-                〒000-000
+                〒
+                =  current_user.address.post_code
               .purchase_address__content__top__add
-                愛知県半田市○◯町0-0-0
+                =  current_user.address.prefecture.name
+                =  current_user.address.city
+                =  current_user.address.address
               .purchase_address__content__top__name
-                廣田亜由美
+                = current_user.family_name_kanji
+                = current_user.first_name_kanji
             .purchase_address__content__btn
               変更する ＞
         = render template: "cards/show"
