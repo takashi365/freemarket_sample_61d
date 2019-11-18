@@ -62,6 +62,6 @@
                 = fa_icon 'question-circle'
                 カード裏面の番号とは？
             %button.btn-default.btn-red{type: "submit"}
-              = link_to '追加する',user_my_card_path(@user.id)
+              = link_to '追加する',user_my_card_path(current_user.id)
   = render 'mypage-side'
 = render 'items/footer'

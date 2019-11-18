@@ -3,15 +3,15 @@
     %ul.mypage-nav-list
       %li
         .mypage-nav-list-item
-          = link_to 'マイページ',users_path(@user)
+          = link_to 'マイページ',users_path(current_user)
           = fa_icon "angle-right"
       %li
         .mypage-nav-list-item
-          = link_to 'お知らせ',user_notification_path(@user.id)
+          = link_to 'お知らせ',user_notification_path(current_user.id)
           = fa_icon "angle-right"
       %li
         .mypage-nav-list-item
-          = link_to 'やることリスト', user_todo_path(@user.id)
+          = link_to 'やることリスト', user_todo_path(current_user.id)
           = fa_icon "angle-right"
       %li
         %a.mypage-nav-list-item
@@ -23,7 +23,7 @@
           = fa_icon "angle-right"
       %li
         .mypage-nav-list-item
-          = link_to '出品した商品 - 出品中',user_exhibited_items_path(@user.id)
+          = link_to '出品した商品 - 出品中',user_exhibited_items_path(current_user.id)
           = fa_icon "angle-right"
       %li
         %a.mypage-nav-list-item
@@ -71,7 +71,7 @@
     %ul.mypage-nav-list
       %li
         .mypage-nav-list-item
-          = link_to 'プロフィール', edit_user_path(@user.id)
+          = link_to 'プロフィール', edit_user_path(current_user.id)
           = fa_icon "angle-right"
       %li
         %a.mypage-nav-list-item
@@ -79,7 +79,7 @@
           = fa_icon "angle-right"
       %li
         .mypage-nav-list-item
-          = link_to '支払い方法', user_method_of_payment_path(@user.id)
+          = link_to '支払い方法', user_method_of_payment_path(current_user.id)
           = fa_icon "angle-right"
       %li
         %a.mypage-nav-list-item
@@ -87,7 +87,7 @@
           = fa_icon "angle-right"
       %li
         .mypage-nav-list-item
-          = link_to '本人情報', user_identification_path(@user.id)
+          = link_to '本人情報', user_identification_path(current_user.id)
           = fa_icon "angle-right"
       %li
         %a.mypage-nav-list-item
@@ -95,5 +95,5 @@
           = fa_icon "angle-right"
       %li
         .mypage-nav-list-item
-          = link_to 'ログアウト', user_logout_path(@user.id)
+          = link_to 'ログアウト', user_logout_path(current_user.id)
           = fa_icon "angle-right"

@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find(1)
+    @user = User.all
   end
 
 end
