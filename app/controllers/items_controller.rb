@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 before_action :set_item, only:[:show]
 before_action :get_parent, only:[:new,:create]
 before_action :set_purchase,  only:[:purchase_page]
+before_action :add_buy, only:[:purchase_pay]
 
 
   def index
@@ -70,10 +71,17 @@ before_action :set_purchase,  only:[:purchase_page]
     Payjp.api_key = Rails.application.credentials.aws[:pay_secret_key]
     customer = Payjp::Customer.retrieve(card.customer_id)
     @default_card_information = customer.cards.retrieve(card.customer_card)
-    @item.update( buyer_id: current_user.id)
   end
 
   def images_up
+  end
+
+  def purchase_pay
+  end
+
+  def add_buy
+    @item = Item.find(params[:item_id])
+    @item.update( buyer_id: current_user.id)
   end
 
   private
