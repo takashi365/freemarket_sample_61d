@@ -12,7 +12,6 @@ before_action :add_buy, only:[:purchase_pay]
   def new
     @item = Item.new
     @item.images.build
-
   end
 
 
@@ -60,6 +59,7 @@ before_action :add_buy, only:[:purchase_pay]
 
   def show
     @category = Category.all
+    @user_items= Item.where(seller_id: @item.seller.id).order("created_at DESC").page(params[:item]).per(6)
   end 
 
   def purchase_page

@@ -1,0 +1,10 @@
+.user_another_item_boxs
+  .item_list_box_item__image
+    = image_tag user_items.images[0].image_url.url
+    .image_price
+      .image_price__enn
+        ¥
+      .image_price__num
+        = user_items.price
+  .item_list_box_item__text
+    = item.description
