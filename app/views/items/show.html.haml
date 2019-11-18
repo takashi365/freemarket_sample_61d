@@ -90,7 +90,7 @@
     .buy_btn
       =link_to item_purchase_page_path(@item),class: 'buy_btn' do
         購入画面に進む
-  -elsif current_user&.id != @item.seller_id && @item.buyer_id.present?
+  -elsif current_user.id != @item.seller_id && @item.buyer_id.present?
     .buy_btn2
       売り切れました
   -if @item.seller_id == current_user.id
