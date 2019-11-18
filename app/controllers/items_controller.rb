@@ -70,6 +70,7 @@ before_action :set_purchase,  only:[:purchase_page]
     Payjp.api_key = Rails.application.credentials.aws[:pay_secret_key]
     customer = Payjp::Customer.retrieve(card.customer_id)
     @default_card_information = customer.cards.retrieve(card.customer_card)
+    @item.update( buyer_id: current_user.id)
   end
 
   def images_up
