@@ -15,7 +15,7 @@
           .l-single-content
             .btn-default.btn-red.submit_button
               = fa_icon "credit-card"
-              = link_to 'クレジットカードを追加する',user_create_card_path(@user.id)
+              = link_to 'クレジットカードを追加する',user_create_card_path(current_user.id)
 
         .settings-not-regist
           %a

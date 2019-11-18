@@ -8,7 +8,8 @@
       %a
         %figure 
           = image_tag 'user_icon.png', height: "60", width: "60"
-        %h2.bold suzuki
+        %h2.bold
+          = current_user.nickname
         .mypage-number
           %div
             評価
