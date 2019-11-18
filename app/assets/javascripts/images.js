@@ -52,7 +52,6 @@ $(document).on('change', 'input[type="file"]', function(event){
  input_area.prepend(new_image);
 });
 $(document).on('click', '.images_up_contents__bottom__right', function() {
-  console.log(images.length)
   if(images.length == 5) {
     dropzone.removeClass('hit')
   }
