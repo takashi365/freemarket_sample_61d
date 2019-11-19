@@ -269,7 +269,6 @@
 .user_another_items{
   width: 700px;
   margin: 0 auto;
-  flex-wrap: wrap;
   &__title{
     font-size: 22px;
     margin: 24px 0 8px;
@@ -280,6 +279,7 @@
 
 .user_another_item{
   width: auto;
+  flex-wrap: wrap;
   ;
 }
 .user_another_item_boxs{

@@ -1,7 +1,7 @@
 = render 'header'
 .iteme_page_main.clearfix
   .iteme_page_main__name
-    =@item.name
+    = @item.name
   .iteme_page_main__view.clearfix
     .iteme_page_main__view_left
       .iteme_page_main__view_left_image
@@ -141,61 +141,7 @@
     =@item.seller.nickname
     さんのその他の出品
   .user_another_item.clearfix.flex
-    .user_another_item_boxs
-      .item_list_box_item__image
-        .image_price
-          .image_price__enn
-            ¥
-          .image_price__num
-            1001
-      .item_list_box_item__text
-        Tシャツ
-    .user_another_item_boxs
-      .item_list_box_item__image
-        .image_price
-          .image_price__enn
-            ¥
-          .image_price__num
-            1002
-      .item_list_box_item__text
-        Tシャツ
-    .user_another_item_boxsss
-      .item_list_box_item__image
-        .image_price
-          .image_price__enn
-            ¥
-          .image_price__num
-            1003
-      .item_list_box_item__text
-        Tシャツ
-  .user_another_item.clearfix.flex
-    .user_another_item_boxs
-      .item_list_box_item__image
-        .image_price
-          .image_price__enn
-            ¥
-          .image_price__num
-            1001
-      .item_list_box_item__text
-        Tシャツ
-    .user_another_item_boxs
-      .item_list_box_item__image
-        .image_price
-          .image_price__enn
-            ¥
-          .image_price__num
-            1001
-      .item_list_box_item__text
-        Tシャツ
-    .user_another_item_boxsss
-      .item_list_box_item__image
-        .image_price
-          .image_price__enn
-            ¥
-          .image_price__num
-            1001
-      .item_list_box_item__text
-        Tシャツ
+    = render @user_items
 .item_page_bottom
   .item_page_bottom__box.flex
     .item_page_bottom_merkari_box.flex
