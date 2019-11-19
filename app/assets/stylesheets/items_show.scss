@@ -57,11 +57,9 @@
 }
 
 .iteme_page_main__view_left_imagess{
-  &__image{
+  img {
     width: 60px;
     height: 60px;
-    max-height: none;
-    background: pink;
   }
 }
 

@@ -5,18 +5,11 @@
   .iteme_page_main__view.clearfix
     .iteme_page_main__view_left
       .iteme_page_main__view_left_image
-        = image_tag @item.images[0].image_url.url
+        = image_tag @item.images[0].image_url.url,class:"details__photo__main__image",id:"mainphoto"
       .iteme_page_main__view_left_imagess.flex
         .iteme_page_main__view_left_imagess__image
-          1
-        .iteme_page_main__view_left_imagess__image
-          2
-        .iteme_page_main__view_left_imagess__image
-          3
-        .iteme_page_main__view_left_imagess__image
-          4
-        .iteme_page_main__view_left_imagess__image
-          5
+        - @images.each_with_index do |image, index|
+          = image_tag @images[index].image_url.url, class:"item_show"
     .iteme_page_main__view_right.clearfix
       .iteme_page_main__view_right__box.flex
         .iteme_page_main__view_right__box_left

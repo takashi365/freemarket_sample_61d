@@ -58,6 +58,7 @@ before_action :add_buy, only:[:purchase_pay]
   end
 
   def show
+    @images = @item.images
     @category = Category.all
     @user_items= Item.where(seller_id: @item.seller.id).order("created_at DESC").page(params[:item]).per(6)
   end 
