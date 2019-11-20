@@ -1,7 +1,7 @@
 .item_list_box_item
   =link_to item_path(item) do
     .item_list_box_item__image
-      = image_tag item.images[0].image_url.url
+      = image_tag item.images[-1].image_url.url
       -if  item.buyer_id.present? 
         .items-box_photo__sold
           .items-box_photo__sold__inner
