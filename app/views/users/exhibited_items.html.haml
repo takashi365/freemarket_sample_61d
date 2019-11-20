@@ -20,7 +20,8 @@
           %a
             売却済み
     .tab-content
-      %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
-        %li.mypage-item-not-found.bold 出品中の商品がありません
+      #mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+        .mypage-item-not-found.bold.flex
+          
   = render 'mypage-side'
 = render 'items/footer'
