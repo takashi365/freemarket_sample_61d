@@ -5,7 +5,7 @@ $(function(){
   var input_area = $('.input_area');
   var preview = $('#preview');
 
-$(document).on('change', 'input[type="file"]', function(event){
+$(document).on('change', '.upload-image', function(event){
   var file = $(this).prop('files')[0];    //prop()でアップロードの状態を取得し変数に格納
   var reader = new FileReader();          //filereaderのインスタンス作成
   inputs.push($(this));                   //配列にfileをpush
@@ -48,24 +48,29 @@ $(document).on('change', 'input[type="file"]', function(event){
       })
       input_area.find('p').replaceWith('<i class="fa fa-camera"></i>')
     }
- var new_image = $(`<input multiple= "multiple" name="images[image_url][]" class="images_up_contents__up" data-image= ${images.length} type="file" id="upload-image">`);
+ var new_image = $(`<input multiple= "multiple" name="images[image_url][]" class="images_up_contents__up upload-image" data-image= ${images.length} type="file" id="upload-image">`);
  input_area.prepend(new_image);
 });
 $(document).on('click', '.images_up_contents__bottom__right', function() {
   if(images.length == 5) {
     dropzone.removeClass('hit')
   }
-  var target_image = $(this).parent().parent();
+  var target_image = $(this).parent().parent();                 //target_imageはimages_up_contentsを狙ってる
   $.each(inputs, function(index, input){
-    if ($(this).data('image') == target_image.data('image')){
+    if ($(this).data('image') == target_image.data('image')){   
       $(this).remove();
       target_image.remove();
       var num = $(this).data('image');
       images.splice(num, 1);
+      inputs.splice(num, 1);
+      if(inputs.length == 0) {
+        $('.upload-image').attr({
+          'data-image': 0
+        })
     }
-  });
+  }
 });
-$('input[type= "file"]:first').attr({
+$('.upload-image').attr({
   'data-image': inputs.length
 })
 $.each(inputs, function(index, input) {
@@ -73,11 +78,7 @@ $.each(inputs, function(index, input) {
   input.attr({
     'data-image': index
   })
-  $('input[type= "file"]:first').after(input)
+  $('.upload-image').after(input)
 })
 });
-
-
-
-
-
+});
