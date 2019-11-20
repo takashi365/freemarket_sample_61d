@@ -56,7 +56,6 @@
               .exhibit_box__list__bottom
                 =f.select :category_id, @category_parent_array, {prompt: ""},{class: 'select-exhibit', id:'parent_category'}
                 .exhibit_box__list__bottom__icon
-                  =fa_icon 'chevron-down'
               - if @item.errors[:category_id].any?
                 = render 'layouts/error_item_enum', model: f.object 
             .exhibit_box__list
@@ -67,7 +66,6 @@
               .exhibit_box__list__bottom.clearfix
                 =f.select :status, Item.statuses.keys, {prompt: "---"}, {class: 'select-exhibit'}
                 .exhibit_box__list__bottom__icon2
-                  =fa_icon 'chevron-down'
               - if @item.errors[:status].any?
                 = render 'layouts/error_item_enum', model: f.object 
         .exhibit_box.flex
@@ -83,7 +81,6 @@
               .exhibit_box__list__bottom
                 =f.select :expense,Item.expenses.keys,{prompt: "---"},{class:'select-exhibit'}
                 .exhibit_box__list__bottom__icon
-                  =fa_icon 'chevron-down'
               - if @item.errors[:expense].any?
                 = render 'layouts/error_item_enum', model: f.object 
             .exhibit_box__list
@@ -94,7 +91,6 @@
               .exhibit_box__list__bottom.clearfix
                 =f.select :prefecture,Item.prefectures.keys,{prompt: "---"},{class:'select-exhibit'}
                 .exhibit_box__list__bottom__icon2
-                  =fa_icon 'chevron-down'
               - if @item.errors[:prefecture].any?
                 = render 'layouts/error_item_enum', model: f.object 
                 .exhibit_box__list
@@ -105,7 +101,6 @@
               .exhibit_box__list__bottom.clearfix
                 =f.select :arrival_date,Item.arrival_dates.keys,{prompt: "---"},{class:'select-exhibit'}
                 .exhibit_box__list__bottom__icon3
-                  =fa_icon 'chevron-down'
               - if @item.errors[:arrival_date].any?
                 = render 'layouts/error_item_enum', model: f.object 
         .exhibit_box.flex
