@@ -16,26 +16,6 @@
   overflow: hidden;
   object-fit: contain;
   background-size: auto;
-  &__left{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-left: 60px;
-    cursor: pointer;
-    height: 46px;
-    width: 31px;
-    line-height: 46px;
-  }
-  &__right{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-right: 60px;
-    background-color: transparent;
-    cursor: pointer;
-    height: 46px;
-    width: 31px;
-  }
 }
 .category_list{
   overflow: scroll;
