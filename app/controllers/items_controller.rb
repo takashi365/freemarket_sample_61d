@@ -3,6 +3,7 @@ before_action :set_item, only:[:show]
 before_action :get_parent, only:[:new,:create]
 before_action :set_purchase,  only:[:purchase_page]
 before_action :add_buy, only:[:purchase_pay]
+before_action :authenticate_user!, only:[:new, :show]
 
 
   def index
@@ -13,7 +14,6 @@ before_action :add_buy, only:[:purchase_pay]
     @item = Item.new
     @item.images.build
   end
-
 
   def get_category_children
     @category_children = Category.find_by(category_name: "#{params[:parent_name]}", ancestry: nil).children
@@ -100,6 +100,7 @@ before_action :add_buy, only:[:purchase_pay]
     @category_parent_array << parent.category_name
     end
   end
+  
 end
 
 

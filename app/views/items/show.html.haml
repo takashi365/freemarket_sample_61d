@@ -86,14 +86,14 @@
     -else
       .purchase_content__price__right
         着払い
-  -if current_user.id != @item.seller_id && @item.buyer_id.nil?
+  -if  current_user.id != @item.seller_id && @item.buyer_id.nil?
     .buy_btn
       =link_to item_purchase_page_path(@item),class: 'buy_btn' do
         購入画面に進む
-  -elsif current_user.id != @item.seller_id && @item.buyer_id.present?
+  -elsif @item.seller_id && @item.buyer_id.present?
     .buy_btn2
       売り切れました
-  -if @item.seller_id == current_user.id
+  -else @item.seller_id
     .listing-item-change-box
       .btn-default.btn-red
         = link_to '商品の編集', edit_item_path(@item)
